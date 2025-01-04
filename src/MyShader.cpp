@@ -1,28 +1,34 @@
 #include "MyShader.h"
 #include <GL/glew.h>
 
+#define SHADER_COMP 0
+#define PROGRAM_LINK 1
+
 MyShader::MyShader(const char* vertex_shader, const char* fragment_shader)
 {
-    setFragmentShader(fragment_shader);
-    setVertexShader(vertex_shader);
-    compileShaderProgram();
+    compileShaderProgram(vertex_shader,fragment_shader);
+}
+MyShader::~MyShader()
+{
+    glDeleteProgram(program_id);
 }
 void MyShader::use() const
 {
     glUseProgram(program_id);
 }
-bool MyShader::compileShaderProgram()
+bool MyShader::compileShaderProgram(const char* vertex_shader_path, const char* fragment_shader_path)
 {
     if (program_id != NO_COMPILED_PROGRAM) return false;
 
     std::stringstream vertex_stream;
     std::stringstream fragment_stream;
-    std::ifstream vertex_file;
-    std::ifstream fragment_file;
-    std::string line;
+    std::ifstream vertex_file(vertex_shader_path);
+    std::ifstream fragment_file(fragment_shader_path);
+    std::string line, source_aux;
 
-    vertex_file.open(vertex_shader_path);
-    fragment_file.open(fragment_shader_path);
+    std::cout << vertex_shader_path << std::endl;
+    std::cout << fragment_shader_path << std::endl;
+
     if (!vertex_file.is_open() || !fragment_file.is_open())
         std::cout << "ERROR::SHADER::NO_SE_PUDIERON_ABRIR_LOS_SHADER" << std::endl;
 
@@ -31,44 +37,66 @@ bool MyShader::compileShaderProgram()
     while  (getline(fragment_file, line))
         fragment_stream << line << "\n";
     
-    const char* vertex_src = vertex_stream.str().c_str();
-    const char* fragment_src = fragment_stream.str().c_str();
+    std::string vertex_source = vertex_stream.str();
+    std::string fragment_source = fragment_stream.str();
+
+    std::cout << vertex_source << std::endl;
+    std::cout << fragment_source << std::endl;
 
     //ACA SE COMPILAN LOS SHADERS
     unsigned int vertex, fragment;
 
-    vertex = glCreateShader(GL_VERTEX_SHADER);
-    glShaderSource(vertex, 1, &vertex_src, NULL);
-    glCompileShader(vertex);
-    //Deberia poner aca una funcion para verificar si el shader se compilo correctamente
+    vertex = compileShader(GL_VERTEX_SHADER, vertex_source);
+    checkCompileErrors(vertex, SHADER_COMP);
 
-    fragment = glCreateShader(GL_FRAGMENT_SHADER);
-    glShaderSource(fragment, 1, &fragment_src, NULL);
-    glCompileShader(fragment);
-    //Deberia poner aca una funcion para verificar si el shader se compilo correctamente
+    fragment = compileShader(GL_FRAGMENT_SHADER, fragment_source);
+    checkCompileErrors(fragment, SHADER_COMP);
 
     //ACA SE COMPILA EL PROGRAMA
-    this->program_id = glCreateProgram();
-    glAttachShader(this->program_id, vertex);
-    glAttachShader(this->program_id, fragment);
-    glLinkProgram(this->program_id);
+    program_id = glCreateProgram();
+    glAttachShader(program_id, vertex);
+    glAttachShader(program_id, fragment);
+    glLinkProgram(program_id);
     //Deberia poner aca una funcion para verificar si el programa se compilo correctamente
-
+    checkCompileErrors(program_id, PROGRAM_LINK);
+    
     glDeleteShader(vertex);
     glDeleteShader(fragment);
     return true;
 }
-bool MyShader::setVertexShader(const char* vertex_shader_path)
+unsigned int MyShader::compileShader(unsigned int type,std::string& source)
 {
-    if (isCompiled()) return false;
-    this->vertex_shader_path = vertex_shader_path;
-    return true;
+    unsigned int shader = glCreateShader(type);
+    const char* shader_src = source.c_str();
+    glShaderSource(shader, 1, &shader_src, NULL);
+	glCompileShader(shader);
+    return shader;
 }
-bool MyShader::setFragmentShader(const char*  fragment_shader_path)
+void MyShader::checkCompileErrors(unsigned int id, int type) const
 {
-    if (isCompiled()) return false;
-    this->vertex_shader_path = fragment_shader_path;
-    return true;
+    int success;
+	char infoLog[512];
+    if (type == SHADER_COMP) 
+    {
+        glGetShaderiv( id, GL_COMPILE_STATUS, &success);
+        if (!success)
+        {
+            glGetShaderInfoLog(id, 512, NULL, infoLog);
+		    std::cout << "ERROR::SHADER::COMPILATION\n" << infoLog << std::endl;  
+        }
+        else std::cout << "SHADER::COMPILATION::SUCCESS"<<"\n";
+    }
+	if (type== PROGRAM_LINK)
+    {
+        glGetProgramiv(id, GL_LINK_STATUS, &success);
+        if (!success)
+        {
+            glGetProgramInfoLog(id, 512, NULL, infoLog);
+            std::cout << "ERROR::SHADER::LINKING\n" << infoLog << std::endl;
+        }
+	    else std::cout << "SHADER::LINKING::SUCCESS"<<"\n";
+    }
+
 }
 bool MyShader::isCompiled()
 {

@@ -2101,10 +2101,10 @@ CMakeFiles/MyApp.dir/src/Application.cpp.o
  /home/pavel/Dev/OpenGL/dependencies/imgui/imconfig.h
  /home/pavel/Dev/OpenGL/dependencies/imgui/imgui.h
  /home/pavel/Dev/OpenGL/dependencies/implot/implot.h
+ /home/pavel/Dev/OpenGL/include/MyShader.h
  /home/pavel/Dev/OpenGL/include/Shape.h
  /home/pavel/Dev/OpenGL/include/iDrawable.h
  /home/pavel/Dev/OpenGL/include/init_deps.h
- /home/pavel/Dev/OpenGL/include/myShader.h
  /usr/include/GL/gl.h
  /usr/include/GL/glew.h
  /usr/include/GL/glu.h
@@ -2367,8 +2367,8 @@ CMakeFiles/MyApp.dir/src/Application.cpp.o
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h
 
-CMakeFiles/MyApp.dir/src/Shape.cpp.o
- /home/pavel/Dev/OpenGL/src/Shape.cpp
+CMakeFiles/MyApp.dir/src/MyShader.cpp.o
+ /home/pavel/Dev/OpenGL/src/MyShader.cpp
  /home/pavel/Dev/OpenGL/dependencies/glm/common.hpp
  /home/pavel/Dev/OpenGL/dependencies/glm/detail/func_exponential.inl
  /home/pavel/Dev/OpenGL/dependencies/glm/detail/func_vector_relational.inl
@@ -2510,9 +2510,7 @@ CMakeFiles/MyApp.dir/src/Shape.cpp.o
  /home/pavel/Dev/OpenGL/dependencies/glm/vec2.hpp
  /home/pavel/Dev/OpenGL/dependencies/glm/vec3.hpp
  /home/pavel/Dev/OpenGL/dependencies/glm/vec4.hpp
- /home/pavel/Dev/OpenGL/include/Shape.h
- /home/pavel/Dev/OpenGL/include/iDrawable.h
- /home/pavel/Dev/OpenGL/include/myShader.h
+ /home/pavel/Dev/OpenGL/include/MyShader.h
  /usr/include/GL/gl.h
  /usr/include/GL/glew.h
  /usr/include/GL/glu.h
@@ -2772,8 +2770,8 @@ CMakeFiles/MyApp.dir/src/Shape.cpp.o
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h
 
-CMakeFiles/MyApp.dir/src/myShader.cpp.o
- /home/pavel/Dev/OpenGL/src/myShader.cpp
+CMakeFiles/MyApp.dir/src/Shape.cpp.o
+ /home/pavel/Dev/OpenGL/src/Shape.cpp
  /home/pavel/Dev/OpenGL/dependencies/glm/common.hpp
  /home/pavel/Dev/OpenGL/dependencies/glm/detail/func_exponential.inl
  /home/pavel/Dev/OpenGL/dependencies/glm/detail/func_vector_relational.inl
@@ -2915,7 +2913,9 @@ CMakeFiles/MyApp.dir/src/myShader.cpp.o
  /home/pavel/Dev/OpenGL/dependencies/glm/vec2.hpp
  /home/pavel/Dev/OpenGL/dependencies/glm/vec3.hpp
  /home/pavel/Dev/OpenGL/dependencies/glm/vec4.hpp
- /home/pavel/Dev/OpenGL/include/myShader.h
+ /home/pavel/Dev/OpenGL/include/MyShader.h
+ /home/pavel/Dev/OpenGL/include/Shape.h
+ /home/pavel/Dev/OpenGL/include/iDrawable.h
  /usr/include/GL/gl.h
  /usr/include/GL/glew.h
  /usr/include/GL/glu.h

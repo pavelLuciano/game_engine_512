@@ -263,7 +263,7 @@ CMakeFiles/MyApp.dir/src/Shape.cpp.o: \
  /home/pavel/Dev/OpenGL/dependencies/glm/integer.hpp \
  /home/pavel/Dev/OpenGL/dependencies/glm/detail/func_integer.inl \
  /home/pavel/Dev/OpenGL/include/iDrawable.h \
- /home/pavel/Dev/OpenGL/include/myShader.h /usr/include/GL/glew.h \
+ /home/pavel/Dev/OpenGL/include/MyShader.h /usr/include/GL/glew.h \
  /usr/include/GL/glu.h /usr/include/GL/gl.h \
  /usr/include/c++/14.2.1/string /usr/include/c++/14.2.1/bits/stringfwd.h \
  /usr/include/c++/14.2.1/bits/char_traits.h \

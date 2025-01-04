@@ -14,14 +14,15 @@ class Shape: public IDrawable
 {
 public:
     unsigned int VAO;
+        std::vector<unsigned int> indices;
 
-    Shape(std::string);
-    //~Shape(){};
-    void draw(MyShader) override;
+    Shape(const char*);
+    ~Shape();
+    void draw(MyShader&) override;
 
 private:
     std::vector<Vertex> vertex_data;
-    std::vector<unsigned int> indices;
+
     unsigned int VBO;
     unsigned int EBO;
 

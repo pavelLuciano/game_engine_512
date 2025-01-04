@@ -2090,10 +2090,10 @@ CMakeFiles/MyApp.dir/src/Application.cpp.o: /home/pavel/Dev/OpenGL/src/Applicati
   /home/pavel/Dev/OpenGL/dependencies/imgui/imconfig.h \
   /home/pavel/Dev/OpenGL/dependencies/imgui/imgui.h \
   /home/pavel/Dev/OpenGL/dependencies/implot/implot.h \
+  /home/pavel/Dev/OpenGL/include/MyShader.h \
   /home/pavel/Dev/OpenGL/include/Shape.h \
   /home/pavel/Dev/OpenGL/include/iDrawable.h \
   /home/pavel/Dev/OpenGL/include/init_deps.h \
-  /home/pavel/Dev/OpenGL/include/myShader.h \
   /usr/include/GL/gl.h \
   /usr/include/GL/glew.h \
   /usr/include/GL/glu.h \
@@ -2356,7 +2356,7 @@ CMakeFiles/MyApp.dir/src/Application.cpp.o: /home/pavel/Dev/OpenGL/src/Applicati
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h
 
-CMakeFiles/MyApp.dir/src/Shape.cpp.o: /home/pavel/Dev/OpenGL/src/Shape.cpp \
+CMakeFiles/MyApp.dir/src/MyShader.cpp.o: /home/pavel/Dev/OpenGL/src/MyShader.cpp \
   /home/pavel/Dev/OpenGL/dependencies/glm/common.hpp \
   /home/pavel/Dev/OpenGL/dependencies/glm/detail/func_exponential.inl \
   /home/pavel/Dev/OpenGL/dependencies/glm/detail/func_vector_relational.inl \
@@ -2498,9 +2498,7 @@ CMakeFiles/MyApp.dir/src/Shape.cpp.o: /home/pavel/Dev/OpenGL/src/Shape.cpp \
   /home/pavel/Dev/OpenGL/dependencies/glm/vec2.hpp \
   /home/pavel/Dev/OpenGL/dependencies/glm/vec3.hpp \
   /home/pavel/Dev/OpenGL/dependencies/glm/vec4.hpp \
-  /home/pavel/Dev/OpenGL/include/Shape.h \
-  /home/pavel/Dev/OpenGL/include/iDrawable.h \
-  /home/pavel/Dev/OpenGL/include/myShader.h \
+  /home/pavel/Dev/OpenGL/include/MyShader.h \
   /usr/include/GL/gl.h \
   /usr/include/GL/glew.h \
   /usr/include/GL/glu.h \
@@ -2760,7 +2758,7 @@ CMakeFiles/MyApp.dir/src/Shape.cpp.o: /home/pavel/Dev/OpenGL/src/Shape.cpp \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h
 
-CMakeFiles/MyApp.dir/src/myShader.cpp.o: /home/pavel/Dev/OpenGL/src/myShader.cpp \
+CMakeFiles/MyApp.dir/src/Shape.cpp.o: /home/pavel/Dev/OpenGL/src/Shape.cpp \
   /home/pavel/Dev/OpenGL/dependencies/glm/common.hpp \
   /home/pavel/Dev/OpenGL/dependencies/glm/detail/func_exponential.inl \
   /home/pavel/Dev/OpenGL/dependencies/glm/detail/func_vector_relational.inl \
@@ -2902,7 +2900,9 @@ CMakeFiles/MyApp.dir/src/myShader.cpp.o: /home/pavel/Dev/OpenGL/src/myShader.cpp
   /home/pavel/Dev/OpenGL/dependencies/glm/vec2.hpp \
   /home/pavel/Dev/OpenGL/dependencies/glm/vec3.hpp \
   /home/pavel/Dev/OpenGL/dependencies/glm/vec4.hpp \
-  /home/pavel/Dev/OpenGL/include/myShader.h \
+  /home/pavel/Dev/OpenGL/include/MyShader.h \
+  /home/pavel/Dev/OpenGL/include/Shape.h \
+  /home/pavel/Dev/OpenGL/include/iDrawable.h \
   /usr/include/GL/gl.h \
   /usr/include/GL/glew.h \
   /usr/include/GL/glu.h \
@@ -3193,7 +3193,7 @@ MyApp: /usr/lib/libc.so \
 
 /usr/lib/libc.so:
 
-/home/pavel/Dev/OpenGL/src/myShader.cpp:
+/home/pavel/Dev/OpenGL/src/Shape.cpp:
 
 /usr/include/wctype.h:
 
@@ -3675,10 +3675,6 @@ MyApp: /usr/lib/libc.so \
 
 /usr/include/bits/types/cookie_io_functions_t.h:
 
-/usr/include/bits/waitstatus.h:
-
-/home/pavel/Dev/OpenGL/dependencies/glm/ext/vector_double2_precision.hpp:
-
 /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/ctype_base.h:
 
 /usr/include/c++/14.2.1/bits/hash_bytes.h:
@@ -3820,6 +3816,8 @@ MyApp: /usr/lib/libc.so \
 /usr/include/bits/types/FILE.h:
 
 /usr/include/c++/14.2.1/cctype:
+
+/home/pavel/Dev/OpenGL/src/MyShader.cpp:
 
 /usr/include/bits/fp-logb.h:
 
@@ -4185,11 +4183,11 @@ MyApp: /usr/lib/libc.so \
 
 /home/pavel/Dev/OpenGL/dependencies/glm/vec4.hpp:
 
-/home/pavel/Dev/OpenGL/src/Shape.cpp:
+/usr/include/bits/waitstatus.h:
 
-/home/pavel/Dev/OpenGL/include/myShader.h:
+/home/pavel/Dev/OpenGL/dependencies/glm/ext/vector_double2_precision.hpp:
 
-/usr/include/c++/14.2.1/bits/basic_ios.tcc:
+/home/pavel/Dev/OpenGL/include/MyShader.h:
 
 /usr/include/sys/single_threaded.h:
 
@@ -4214,6 +4212,8 @@ MyApp: /usr/lib/libc.so \
 /usr/include/c++/14.2.1/bits/allocator.h:
 
 /usr/include/c++/14.2.1/bits/basic_ios.h:
+
+/usr/include/c++/14.2.1/bits/basic_ios.tcc:
 
 /usr/include/c++/14.2.1/bits/basic_string.h:
 

@@ -26,9 +26,11 @@ int main()
 
     //figura dibujable
     Shape caja("../resources/shapes/box.shape");
+
     //shader
+    MyShader mi_shader("../resources/shaders/vertex_shader.shader", "../resources/shaders/fragment_shader.shader");
 
-
+    if (!mi_shader.isCompiled()) return EXIT_FAILURE;
     
     //bucle de ejecucion
     while (!glfwWindowShouldClose(mi_ventana))
@@ -50,6 +52,13 @@ int main()
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
+
+        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+
+        caja.draw(mi_shader);
+
 
 
         ImGui::Render();

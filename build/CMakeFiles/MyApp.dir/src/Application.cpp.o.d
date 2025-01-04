@@ -335,7 +335,7 @@ CMakeFiles/MyApp.dir/src/Application.cpp.o: \
  /home/pavel/Dev/OpenGL/include/init_deps.h \
  /home/pavel/Dev/OpenGL/include/Shape.h \
  /home/pavel/Dev/OpenGL/include/iDrawable.h \
- /home/pavel/Dev/OpenGL/include/myShader.h \
+ /home/pavel/Dev/OpenGL/include/MyShader.h \
  /usr/include/c++/14.2.1/fstream /usr/include/c++/14.2.1/bits/codecvt.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++io.h \

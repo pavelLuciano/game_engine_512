@@ -86,10 +86,24 @@ CMakeFiles/MyApp.dir/src/Application.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyApp.dir/src/Application.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pavel/Dev/OpenGL/src/Application.cpp -o CMakeFiles/MyApp.dir/src/Application.cpp.s
 
+CMakeFiles/MyApp.dir/src/MyShader.cpp.o: CMakeFiles/MyApp.dir/flags.make
+CMakeFiles/MyApp.dir/src/MyShader.cpp.o: /home/pavel/Dev/OpenGL/src/MyShader.cpp
+CMakeFiles/MyApp.dir/src/MyShader.cpp.o: CMakeFiles/MyApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MyApp.dir/src/MyShader.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyApp.dir/src/MyShader.cpp.o -MF CMakeFiles/MyApp.dir/src/MyShader.cpp.o.d -o CMakeFiles/MyApp.dir/src/MyShader.cpp.o -c /home/pavel/Dev/OpenGL/src/MyShader.cpp
+
+CMakeFiles/MyApp.dir/src/MyShader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyApp.dir/src/MyShader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pavel/Dev/OpenGL/src/MyShader.cpp > CMakeFiles/MyApp.dir/src/MyShader.cpp.i
+
+CMakeFiles/MyApp.dir/src/MyShader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyApp.dir/src/MyShader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pavel/Dev/OpenGL/src/MyShader.cpp -o CMakeFiles/MyApp.dir/src/MyShader.cpp.s
+
 CMakeFiles/MyApp.dir/src/Shape.cpp.o: CMakeFiles/MyApp.dir/flags.make
 CMakeFiles/MyApp.dir/src/Shape.cpp.o: /home/pavel/Dev/OpenGL/src/Shape.cpp
 CMakeFiles/MyApp.dir/src/Shape.cpp.o: CMakeFiles/MyApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MyApp.dir/src/Shape.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MyApp.dir/src/Shape.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyApp.dir/src/Shape.cpp.o -MF CMakeFiles/MyApp.dir/src/Shape.cpp.o.d -o CMakeFiles/MyApp.dir/src/Shape.cpp.o -c /home/pavel/Dev/OpenGL/src/Shape.cpp
 
 CMakeFiles/MyApp.dir/src/Shape.cpp.i: cmake_force
@@ -99,20 +113,6 @@ CMakeFiles/MyApp.dir/src/Shape.cpp.i: cmake_force
 CMakeFiles/MyApp.dir/src/Shape.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyApp.dir/src/Shape.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pavel/Dev/OpenGL/src/Shape.cpp -o CMakeFiles/MyApp.dir/src/Shape.cpp.s
-
-CMakeFiles/MyApp.dir/src/myShader.cpp.o: CMakeFiles/MyApp.dir/flags.make
-CMakeFiles/MyApp.dir/src/myShader.cpp.o: /home/pavel/Dev/OpenGL/src/myShader.cpp
-CMakeFiles/MyApp.dir/src/myShader.cpp.o: CMakeFiles/MyApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MyApp.dir/src/myShader.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyApp.dir/src/myShader.cpp.o -MF CMakeFiles/MyApp.dir/src/myShader.cpp.o.d -o CMakeFiles/MyApp.dir/src/myShader.cpp.o -c /home/pavel/Dev/OpenGL/src/myShader.cpp
-
-CMakeFiles/MyApp.dir/src/myShader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyApp.dir/src/myShader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pavel/Dev/OpenGL/src/myShader.cpp > CMakeFiles/MyApp.dir/src/myShader.cpp.i
-
-CMakeFiles/MyApp.dir/src/myShader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyApp.dir/src/myShader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pavel/Dev/OpenGL/src/myShader.cpp -o CMakeFiles/MyApp.dir/src/myShader.cpp.s
 
 CMakeFiles/MyApp.dir/dependencies/imgui/imgui.cpp.o: CMakeFiles/MyApp.dir/flags.make
 CMakeFiles/MyApp.dir/dependencies/imgui/imgui.cpp.o: /home/pavel/Dev/OpenGL/dependencies/imgui/imgui.cpp
@@ -257,8 +257,8 @@ CMakeFiles/MyApp.dir/dependencies/implot/implot_demo.cpp.s: cmake_force
 # Object files for target MyApp
 MyApp_OBJECTS = \
 "CMakeFiles/MyApp.dir/src/Application.cpp.o" \
+"CMakeFiles/MyApp.dir/src/MyShader.cpp.o" \
 "CMakeFiles/MyApp.dir/src/Shape.cpp.o" \
-"CMakeFiles/MyApp.dir/src/myShader.cpp.o" \
 "CMakeFiles/MyApp.dir/dependencies/imgui/imgui.cpp.o" \
 "CMakeFiles/MyApp.dir/dependencies/imgui/imgui_demo.cpp.o" \
 "CMakeFiles/MyApp.dir/dependencies/imgui/imgui_draw.cpp.o" \
@@ -274,8 +274,8 @@ MyApp_OBJECTS = \
 MyApp_EXTERNAL_OBJECTS =
 
 MyApp: CMakeFiles/MyApp.dir/src/Application.cpp.o
+MyApp: CMakeFiles/MyApp.dir/src/MyShader.cpp.o
 MyApp: CMakeFiles/MyApp.dir/src/Shape.cpp.o
-MyApp: CMakeFiles/MyApp.dir/src/myShader.cpp.o
 MyApp: CMakeFiles/MyApp.dir/dependencies/imgui/imgui.cpp.o
 MyApp: CMakeFiles/MyApp.dir/dependencies/imgui/imgui_demo.cpp.o
 MyApp: CMakeFiles/MyApp.dir/dependencies/imgui/imgui_draw.cpp.o

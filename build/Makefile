@@ -393,6 +393,30 @@ src/Application.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/src/Application.cpp.s
 .PHONY : src/Application.cpp.s
 
+src/MyShader.o: src/MyShader.cpp.o
+.PHONY : src/MyShader.o
+
+# target to build an object file
+src/MyShader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/src/MyShader.cpp.o
+.PHONY : src/MyShader.cpp.o
+
+src/MyShader.i: src/MyShader.cpp.i
+.PHONY : src/MyShader.i
+
+# target to preprocess a source file
+src/MyShader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/src/MyShader.cpp.i
+.PHONY : src/MyShader.cpp.i
+
+src/MyShader.s: src/MyShader.cpp.s
+.PHONY : src/MyShader.s
+
+# target to generate assembly for a file
+src/MyShader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/src/MyShader.cpp.s
+.PHONY : src/MyShader.cpp.s
+
 src/Shape.o: src/Shape.cpp.o
 .PHONY : src/Shape.o
 
@@ -416,30 +440,6 @@ src/Shape.s: src/Shape.cpp.s
 src/Shape.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/src/Shape.cpp.s
 .PHONY : src/Shape.cpp.s
-
-src/myShader.o: src/myShader.cpp.o
-.PHONY : src/myShader.o
-
-# target to build an object file
-src/myShader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/src/myShader.cpp.o
-.PHONY : src/myShader.cpp.o
-
-src/myShader.i: src/myShader.cpp.i
-.PHONY : src/myShader.i
-
-# target to preprocess a source file
-src/myShader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/src/myShader.cpp.i
-.PHONY : src/myShader.cpp.i
-
-src/myShader.s: src/myShader.cpp.s
-.PHONY : src/myShader.s
-
-# target to generate assembly for a file
-src/myShader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/src/myShader.cpp.s
-.PHONY : src/myShader.cpp.s
 
 # Help Target
 help:
@@ -483,12 +483,12 @@ help:
 	@echo "... src/Application.o"
 	@echo "... src/Application.i"
 	@echo "... src/Application.s"
+	@echo "... src/MyShader.o"
+	@echo "... src/MyShader.i"
+	@echo "... src/MyShader.s"
 	@echo "... src/Shape.o"
 	@echo "... src/Shape.i"
 	@echo "... src/Shape.s"
-	@echo "... src/myShader.o"
-	@echo "... src/myShader.i"
-	@echo "... src/myShader.s"
 .PHONY : help
 
 

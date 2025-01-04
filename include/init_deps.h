@@ -43,6 +43,7 @@ inline GLFWwindow* initDepsAndCreateWin()
         glfwTerminate();
         return NULL;
     }
+    glViewport(0, 0, WIDTH*0.8,  HEIGHT);
     std::cout << "OpenGL iniciado correctamente\nVersion: " << glGetString(GL_VERSION) << std::endl;
     glEnable(GL_DEPTH_TEST);
 

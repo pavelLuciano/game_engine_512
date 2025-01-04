@@ -15,27 +15,25 @@
 class MyShader
 {
 public:
-    unsigned int program_id;
-    const char* vertex_shader_path;
-    const char* fragment_shader_path;
+    unsigned int program_id = NO_COMPILED_PROGRAM;
+
     //constructores
     MyShader(const char*, const char*);
     MyShader(const char*);
-    MyShader();
+    //MyShader();
     //destructor
     ~MyShader();
     //metodos
     //getters
     unsigned int getID() const;
     void use() const;
-    //setters
-    bool setVertexShader(const char*);
-    bool setFragmentShader(const char*);
+    bool isCompiled();
 
 private:
-    bool compileShaderProgram();
-    void checkCompileErrors() const;
-    bool isCompiled();
+    bool compileShaderProgram(const char*, const char*);
+    unsigned int compileShader(unsigned int, std::string&);
+    void checkCompileErrors(unsigned int, int) const;
+    
 };
 
 #endif

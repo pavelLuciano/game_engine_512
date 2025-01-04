@@ -22,10 +22,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/MyApp.dir/dependencies/implot/implot_items.cpp.o.d"
   "CMakeFiles/MyApp.dir/src/Application.cpp.o"
   "CMakeFiles/MyApp.dir/src/Application.cpp.o.d"
+  "CMakeFiles/MyApp.dir/src/MyShader.cpp.o"
+  "CMakeFiles/MyApp.dir/src/MyShader.cpp.o.d"
   "CMakeFiles/MyApp.dir/src/Shape.cpp.o"
   "CMakeFiles/MyApp.dir/src/Shape.cpp.o.d"
-  "CMakeFiles/MyApp.dir/src/myShader.cpp.o"
-  "CMakeFiles/MyApp.dir/src/myShader.cpp.o.d"
   "MyApp"
   "MyApp.pdb"
 )
