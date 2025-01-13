@@ -21,7 +21,7 @@ void Shape::loadFromFile(const char* file_path)
 {
     enum Mode
     {
-        VERTICES = 0, INDICES
+        VERTICES = 0, COLORS, INDICES
     };
     std::ifstream vertex_data_file(file_path);
     std::string line;
@@ -32,6 +32,11 @@ void Shape::loadFromFile(const char* file_path)
         if (line.find("VERTICES") != std::string::npos) 
         {
             current_mode = VERTICES;
+            getline(vertex_data_file, line);
+        }
+        if (line.find("COLORS")  != std::string::npos)
+        {
+            current_mode = COLORS;
             getline(vertex_data_file, line);
         }
         if (line.find("INDICES")  != std::string::npos)
@@ -50,9 +55,21 @@ void Shape::loadFromFile(const char* file_path)
                 iss >> z;
                 this->vertex_data.push_back({
                         glm::vec3(std::stof(x), std::stof(y), std::stof(y)),
-                        glm::vec3(1.0f, 0.0f, 0.0f),
+                        glm::vec3(0.0f, 0.0f, 0.0f),
                         glm::vec2(0.0f, 0.0f)
                 });
+            }
+            break;
+            case COLORS:
+            {
+                static int index = 0;
+                std::istringstream iss(line);
+                std::string R, G, B;
+                iss >> R;
+                iss >> G;
+                iss >> B;
+                this->vertex_data[index].color = glm::vec3(std::stof(R), std::stof(G), std::stof(B));
+                index++;
             }
             break;
             case INDICES:

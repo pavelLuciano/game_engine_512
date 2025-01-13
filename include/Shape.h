@@ -1,7 +1,7 @@
 #ifndef _SHAPE_H
 #define _SHAPE_H
 #include <glm/glm.hpp>
-#include "iDrawable.h"
+#include "Entity.h"
 
 struct Vertex
 {
@@ -10,11 +10,10 @@ struct Vertex
     glm::vec2 tex_coords;
 };
 
-class Shape: public IDrawable
+class Shape: public Entity
 {
 public:
     unsigned int VAO;
-        std::vector<unsigned int> indices;
 
     Shape(const char*);
     ~Shape();
@@ -22,6 +21,7 @@ public:
 
 private:
     std::vector<Vertex> vertex_data;
+    std::vector<unsigned int> indices;
 
     unsigned int VBO;
     unsigned int EBO;
