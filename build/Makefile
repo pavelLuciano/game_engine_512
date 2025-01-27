@@ -393,6 +393,54 @@ src/Application.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/src/Application.cpp.s
 .PHONY : src/Application.cpp.s
 
+src/Entity.o: src/Entity.cpp.o
+.PHONY : src/Entity.o
+
+# target to build an object file
+src/Entity.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/src/Entity.cpp.o
+.PHONY : src/Entity.cpp.o
+
+src/Entity.i: src/Entity.cpp.i
+.PHONY : src/Entity.i
+
+# target to preprocess a source file
+src/Entity.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/src/Entity.cpp.i
+.PHONY : src/Entity.cpp.i
+
+src/Entity.s: src/Entity.cpp.s
+.PHONY : src/Entity.s
+
+# target to generate assembly for a file
+src/Entity.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/src/Entity.cpp.s
+.PHONY : src/Entity.cpp.s
+
+src/MyCamera.o: src/MyCamera.cpp.o
+.PHONY : src/MyCamera.o
+
+# target to build an object file
+src/MyCamera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/src/MyCamera.cpp.o
+.PHONY : src/MyCamera.cpp.o
+
+src/MyCamera.i: src/MyCamera.cpp.i
+.PHONY : src/MyCamera.i
+
+# target to preprocess a source file
+src/MyCamera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/src/MyCamera.cpp.i
+.PHONY : src/MyCamera.cpp.i
+
+src/MyCamera.s: src/MyCamera.cpp.s
+.PHONY : src/MyCamera.s
+
+# target to generate assembly for a file
+src/MyCamera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyApp.dir/build.make CMakeFiles/MyApp.dir/src/MyCamera.cpp.s
+.PHONY : src/MyCamera.cpp.s
+
 src/MyShader.o: src/MyShader.cpp.o
 .PHONY : src/MyShader.o
 
@@ -483,6 +531,12 @@ help:
 	@echo "... src/Application.o"
 	@echo "... src/Application.i"
 	@echo "... src/Application.s"
+	@echo "... src/Entity.o"
+	@echo "... src/Entity.i"
+	@echo "... src/Entity.s"
+	@echo "... src/MyCamera.o"
+	@echo "... src/MyCamera.i"
+	@echo "... src/MyCamera.s"
 	@echo "... src/MyShader.o"
 	@echo "... src/MyShader.i"
 	@echo "... src/MyShader.s"

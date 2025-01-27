@@ -1,6 +1,7 @@
 CMakeFiles/MyApp.dir/src/Shape.cpp.o: \
  /home/pavel/Dev/OpenGL/src/Shape.cpp /usr/include/stdc-predef.h \
  /home/pavel/Dev/OpenGL/include/Shape.h \
+ /home/pavel/Dev/OpenGL/include/Entity.h \
  /home/pavel/Dev/OpenGL/dependencies/glm/glm.hpp \
  /home/pavel/Dev/OpenGL/dependencies/glm/detail/_fixes.hpp \
  /usr/include/c++/14.2.1/cmath \
@@ -262,6 +263,59 @@ CMakeFiles/MyApp.dir/src/Shape.cpp.o: \
  /home/pavel/Dev/OpenGL/dependencies/glm/detail/type_half.inl \
  /home/pavel/Dev/OpenGL/dependencies/glm/integer.hpp \
  /home/pavel/Dev/OpenGL/dependencies/glm/detail/func_integer.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/matrix_transform.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/matrix_projection.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/../gtc/constants.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/../gtc/../ext/scalar_constants.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/../gtc/../ext/../detail/setup.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/../gtc/../ext/scalar_constants.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/../gtc/constants.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/matrix_projection.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/matrix_clip_space.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/matrix_clip_space.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/matrix_transform.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/matrix_transform.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/matrix_transform.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/type_ptr.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/quaternion.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_relational.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_relational.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/../detail/type_float.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/../detail/setup.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/quaternion_common.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/../ext/quaternion_geometric.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/../ext/quaternion_geometric.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/quaternion_common.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/quaternion_float.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/../detail/type_quat.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/../detail/../ext/quaternion_relational.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/../detail/../ext/quaternion_relational.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/../detail/type_quat.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/quaternion_float_precision.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/quaternion_double.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/quaternion_double_precision.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/quaternion_trigonometric.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/quaternion_trigonometric.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/quaternion_transform.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/quaternion_transform.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/quaternion.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/epsilon.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../detail/setup.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/epsilon.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/vec1.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_bool1.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_bool1_precision.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_float1.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_float1_precision.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_double1.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_double1_precision.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_int1.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_int1_sized.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_uint1.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_uint1_sized.hpp \
+ /usr/include/c++/14.2.1/cstring /usr/include/string.h \
+ /usr/include/strings.h \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/type_ptr.inl \
  /home/pavel/Dev/OpenGL/include/iDrawable.h \
  /home/pavel/Dev/OpenGL/include/MyShader.h /usr/include/GL/glew.h \
  /usr/include/GL/glu.h /usr/include/GL/gl.h \

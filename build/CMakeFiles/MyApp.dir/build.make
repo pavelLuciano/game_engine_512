@@ -86,10 +86,38 @@ CMakeFiles/MyApp.dir/src/Application.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyApp.dir/src/Application.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pavel/Dev/OpenGL/src/Application.cpp -o CMakeFiles/MyApp.dir/src/Application.cpp.s
 
+CMakeFiles/MyApp.dir/src/Entity.cpp.o: CMakeFiles/MyApp.dir/flags.make
+CMakeFiles/MyApp.dir/src/Entity.cpp.o: /home/pavel/Dev/OpenGL/src/Entity.cpp
+CMakeFiles/MyApp.dir/src/Entity.cpp.o: CMakeFiles/MyApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MyApp.dir/src/Entity.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyApp.dir/src/Entity.cpp.o -MF CMakeFiles/MyApp.dir/src/Entity.cpp.o.d -o CMakeFiles/MyApp.dir/src/Entity.cpp.o -c /home/pavel/Dev/OpenGL/src/Entity.cpp
+
+CMakeFiles/MyApp.dir/src/Entity.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyApp.dir/src/Entity.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pavel/Dev/OpenGL/src/Entity.cpp > CMakeFiles/MyApp.dir/src/Entity.cpp.i
+
+CMakeFiles/MyApp.dir/src/Entity.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyApp.dir/src/Entity.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pavel/Dev/OpenGL/src/Entity.cpp -o CMakeFiles/MyApp.dir/src/Entity.cpp.s
+
+CMakeFiles/MyApp.dir/src/MyCamera.cpp.o: CMakeFiles/MyApp.dir/flags.make
+CMakeFiles/MyApp.dir/src/MyCamera.cpp.o: /home/pavel/Dev/OpenGL/src/MyCamera.cpp
+CMakeFiles/MyApp.dir/src/MyCamera.cpp.o: CMakeFiles/MyApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MyApp.dir/src/MyCamera.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyApp.dir/src/MyCamera.cpp.o -MF CMakeFiles/MyApp.dir/src/MyCamera.cpp.o.d -o CMakeFiles/MyApp.dir/src/MyCamera.cpp.o -c /home/pavel/Dev/OpenGL/src/MyCamera.cpp
+
+CMakeFiles/MyApp.dir/src/MyCamera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyApp.dir/src/MyCamera.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pavel/Dev/OpenGL/src/MyCamera.cpp > CMakeFiles/MyApp.dir/src/MyCamera.cpp.i
+
+CMakeFiles/MyApp.dir/src/MyCamera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyApp.dir/src/MyCamera.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pavel/Dev/OpenGL/src/MyCamera.cpp -o CMakeFiles/MyApp.dir/src/MyCamera.cpp.s
+
 CMakeFiles/MyApp.dir/src/MyShader.cpp.o: CMakeFiles/MyApp.dir/flags.make
 CMakeFiles/MyApp.dir/src/MyShader.cpp.o: /home/pavel/Dev/OpenGL/src/MyShader.cpp
 CMakeFiles/MyApp.dir/src/MyShader.cpp.o: CMakeFiles/MyApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MyApp.dir/src/MyShader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MyApp.dir/src/MyShader.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyApp.dir/src/MyShader.cpp.o -MF CMakeFiles/MyApp.dir/src/MyShader.cpp.o.d -o CMakeFiles/MyApp.dir/src/MyShader.cpp.o -c /home/pavel/Dev/OpenGL/src/MyShader.cpp
 
 CMakeFiles/MyApp.dir/src/MyShader.cpp.i: cmake_force
@@ -103,7 +131,7 @@ CMakeFiles/MyApp.dir/src/MyShader.cpp.s: cmake_force
 CMakeFiles/MyApp.dir/src/Shape.cpp.o: CMakeFiles/MyApp.dir/flags.make
 CMakeFiles/MyApp.dir/src/Shape.cpp.o: /home/pavel/Dev/OpenGL/src/Shape.cpp
 CMakeFiles/MyApp.dir/src/Shape.cpp.o: CMakeFiles/MyApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MyApp.dir/src/Shape.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MyApp.dir/src/Shape.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyApp.dir/src/Shape.cpp.o -MF CMakeFiles/MyApp.dir/src/Shape.cpp.o.d -o CMakeFiles/MyApp.dir/src/Shape.cpp.o -c /home/pavel/Dev/OpenGL/src/Shape.cpp
 
 CMakeFiles/MyApp.dir/src/Shape.cpp.i: cmake_force
@@ -117,7 +145,7 @@ CMakeFiles/MyApp.dir/src/Shape.cpp.s: cmake_force
 CMakeFiles/MyApp.dir/dependencies/imgui/imgui.cpp.o: CMakeFiles/MyApp.dir/flags.make
 CMakeFiles/MyApp.dir/dependencies/imgui/imgui.cpp.o: /home/pavel/Dev/OpenGL/dependencies/imgui/imgui.cpp
 CMakeFiles/MyApp.dir/dependencies/imgui/imgui.cpp.o: CMakeFiles/MyApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MyApp.dir/dependencies/imgui/imgui.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MyApp.dir/dependencies/imgui/imgui.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyApp.dir/dependencies/imgui/imgui.cpp.o -MF CMakeFiles/MyApp.dir/dependencies/imgui/imgui.cpp.o.d -o CMakeFiles/MyApp.dir/dependencies/imgui/imgui.cpp.o -c /home/pavel/Dev/OpenGL/dependencies/imgui/imgui.cpp
 
 CMakeFiles/MyApp.dir/dependencies/imgui/imgui.cpp.i: cmake_force
@@ -131,7 +159,7 @@ CMakeFiles/MyApp.dir/dependencies/imgui/imgui.cpp.s: cmake_force
 CMakeFiles/MyApp.dir/dependencies/imgui/imgui_demo.cpp.o: CMakeFiles/MyApp.dir/flags.make
 CMakeFiles/MyApp.dir/dependencies/imgui/imgui_demo.cpp.o: /home/pavel/Dev/OpenGL/dependencies/imgui/imgui_demo.cpp
 CMakeFiles/MyApp.dir/dependencies/imgui/imgui_demo.cpp.o: CMakeFiles/MyApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MyApp.dir/dependencies/imgui/imgui_demo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/MyApp.dir/dependencies/imgui/imgui_demo.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyApp.dir/dependencies/imgui/imgui_demo.cpp.o -MF CMakeFiles/MyApp.dir/dependencies/imgui/imgui_demo.cpp.o.d -o CMakeFiles/MyApp.dir/dependencies/imgui/imgui_demo.cpp.o -c /home/pavel/Dev/OpenGL/dependencies/imgui/imgui_demo.cpp
 
 CMakeFiles/MyApp.dir/dependencies/imgui/imgui_demo.cpp.i: cmake_force
@@ -145,7 +173,7 @@ CMakeFiles/MyApp.dir/dependencies/imgui/imgui_demo.cpp.s: cmake_force
 CMakeFiles/MyApp.dir/dependencies/imgui/imgui_draw.cpp.o: CMakeFiles/MyApp.dir/flags.make
 CMakeFiles/MyApp.dir/dependencies/imgui/imgui_draw.cpp.o: /home/pavel/Dev/OpenGL/dependencies/imgui/imgui_draw.cpp
 CMakeFiles/MyApp.dir/dependencies/imgui/imgui_draw.cpp.o: CMakeFiles/MyApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MyApp.dir/dependencies/imgui/imgui_draw.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/MyApp.dir/dependencies/imgui/imgui_draw.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyApp.dir/dependencies/imgui/imgui_draw.cpp.o -MF CMakeFiles/MyApp.dir/dependencies/imgui/imgui_draw.cpp.o.d -o CMakeFiles/MyApp.dir/dependencies/imgui/imgui_draw.cpp.o -c /home/pavel/Dev/OpenGL/dependencies/imgui/imgui_draw.cpp
 
 CMakeFiles/MyApp.dir/dependencies/imgui/imgui_draw.cpp.i: cmake_force
@@ -159,7 +187,7 @@ CMakeFiles/MyApp.dir/dependencies/imgui/imgui_draw.cpp.s: cmake_force
 CMakeFiles/MyApp.dir/dependencies/imgui/imgui_tables.cpp.o: CMakeFiles/MyApp.dir/flags.make
 CMakeFiles/MyApp.dir/dependencies/imgui/imgui_tables.cpp.o: /home/pavel/Dev/OpenGL/dependencies/imgui/imgui_tables.cpp
 CMakeFiles/MyApp.dir/dependencies/imgui/imgui_tables.cpp.o: CMakeFiles/MyApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/MyApp.dir/dependencies/imgui/imgui_tables.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/MyApp.dir/dependencies/imgui/imgui_tables.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyApp.dir/dependencies/imgui/imgui_tables.cpp.o -MF CMakeFiles/MyApp.dir/dependencies/imgui/imgui_tables.cpp.o.d -o CMakeFiles/MyApp.dir/dependencies/imgui/imgui_tables.cpp.o -c /home/pavel/Dev/OpenGL/dependencies/imgui/imgui_tables.cpp
 
 CMakeFiles/MyApp.dir/dependencies/imgui/imgui_tables.cpp.i: cmake_force
@@ -173,7 +201,7 @@ CMakeFiles/MyApp.dir/dependencies/imgui/imgui_tables.cpp.s: cmake_force
 CMakeFiles/MyApp.dir/dependencies/imgui/imgui_widgets.cpp.o: CMakeFiles/MyApp.dir/flags.make
 CMakeFiles/MyApp.dir/dependencies/imgui/imgui_widgets.cpp.o: /home/pavel/Dev/OpenGL/dependencies/imgui/imgui_widgets.cpp
 CMakeFiles/MyApp.dir/dependencies/imgui/imgui_widgets.cpp.o: CMakeFiles/MyApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/MyApp.dir/dependencies/imgui/imgui_widgets.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/MyApp.dir/dependencies/imgui/imgui_widgets.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyApp.dir/dependencies/imgui/imgui_widgets.cpp.o -MF CMakeFiles/MyApp.dir/dependencies/imgui/imgui_widgets.cpp.o.d -o CMakeFiles/MyApp.dir/dependencies/imgui/imgui_widgets.cpp.o -c /home/pavel/Dev/OpenGL/dependencies/imgui/imgui_widgets.cpp
 
 CMakeFiles/MyApp.dir/dependencies/imgui/imgui_widgets.cpp.i: cmake_force
@@ -187,7 +215,7 @@ CMakeFiles/MyApp.dir/dependencies/imgui/imgui_widgets.cpp.s: cmake_force
 CMakeFiles/MyApp.dir/dependencies/imgui/backends/imgui_impl_glfw.cpp.o: CMakeFiles/MyApp.dir/flags.make
 CMakeFiles/MyApp.dir/dependencies/imgui/backends/imgui_impl_glfw.cpp.o: /home/pavel/Dev/OpenGL/dependencies/imgui/backends/imgui_impl_glfw.cpp
 CMakeFiles/MyApp.dir/dependencies/imgui/backends/imgui_impl_glfw.cpp.o: CMakeFiles/MyApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/MyApp.dir/dependencies/imgui/backends/imgui_impl_glfw.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/MyApp.dir/dependencies/imgui/backends/imgui_impl_glfw.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyApp.dir/dependencies/imgui/backends/imgui_impl_glfw.cpp.o -MF CMakeFiles/MyApp.dir/dependencies/imgui/backends/imgui_impl_glfw.cpp.o.d -o CMakeFiles/MyApp.dir/dependencies/imgui/backends/imgui_impl_glfw.cpp.o -c /home/pavel/Dev/OpenGL/dependencies/imgui/backends/imgui_impl_glfw.cpp
 
 CMakeFiles/MyApp.dir/dependencies/imgui/backends/imgui_impl_glfw.cpp.i: cmake_force
@@ -201,7 +229,7 @@ CMakeFiles/MyApp.dir/dependencies/imgui/backends/imgui_impl_glfw.cpp.s: cmake_fo
 CMakeFiles/MyApp.dir/dependencies/imgui/backends/imgui_impl_opengl3.cpp.o: CMakeFiles/MyApp.dir/flags.make
 CMakeFiles/MyApp.dir/dependencies/imgui/backends/imgui_impl_opengl3.cpp.o: /home/pavel/Dev/OpenGL/dependencies/imgui/backends/imgui_impl_opengl3.cpp
 CMakeFiles/MyApp.dir/dependencies/imgui/backends/imgui_impl_opengl3.cpp.o: CMakeFiles/MyApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/MyApp.dir/dependencies/imgui/backends/imgui_impl_opengl3.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/MyApp.dir/dependencies/imgui/backends/imgui_impl_opengl3.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyApp.dir/dependencies/imgui/backends/imgui_impl_opengl3.cpp.o -MF CMakeFiles/MyApp.dir/dependencies/imgui/backends/imgui_impl_opengl3.cpp.o.d -o CMakeFiles/MyApp.dir/dependencies/imgui/backends/imgui_impl_opengl3.cpp.o -c /home/pavel/Dev/OpenGL/dependencies/imgui/backends/imgui_impl_opengl3.cpp
 
 CMakeFiles/MyApp.dir/dependencies/imgui/backends/imgui_impl_opengl3.cpp.i: cmake_force
@@ -215,7 +243,7 @@ CMakeFiles/MyApp.dir/dependencies/imgui/backends/imgui_impl_opengl3.cpp.s: cmake
 CMakeFiles/MyApp.dir/dependencies/implot/implot.cpp.o: CMakeFiles/MyApp.dir/flags.make
 CMakeFiles/MyApp.dir/dependencies/implot/implot.cpp.o: /home/pavel/Dev/OpenGL/dependencies/implot/implot.cpp
 CMakeFiles/MyApp.dir/dependencies/implot/implot.cpp.o: CMakeFiles/MyApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/MyApp.dir/dependencies/implot/implot.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/MyApp.dir/dependencies/implot/implot.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyApp.dir/dependencies/implot/implot.cpp.o -MF CMakeFiles/MyApp.dir/dependencies/implot/implot.cpp.o.d -o CMakeFiles/MyApp.dir/dependencies/implot/implot.cpp.o -c /home/pavel/Dev/OpenGL/dependencies/implot/implot.cpp
 
 CMakeFiles/MyApp.dir/dependencies/implot/implot.cpp.i: cmake_force
@@ -229,7 +257,7 @@ CMakeFiles/MyApp.dir/dependencies/implot/implot.cpp.s: cmake_force
 CMakeFiles/MyApp.dir/dependencies/implot/implot_items.cpp.o: CMakeFiles/MyApp.dir/flags.make
 CMakeFiles/MyApp.dir/dependencies/implot/implot_items.cpp.o: /home/pavel/Dev/OpenGL/dependencies/implot/implot_items.cpp
 CMakeFiles/MyApp.dir/dependencies/implot/implot_items.cpp.o: CMakeFiles/MyApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/MyApp.dir/dependencies/implot/implot_items.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/MyApp.dir/dependencies/implot/implot_items.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyApp.dir/dependencies/implot/implot_items.cpp.o -MF CMakeFiles/MyApp.dir/dependencies/implot/implot_items.cpp.o.d -o CMakeFiles/MyApp.dir/dependencies/implot/implot_items.cpp.o -c /home/pavel/Dev/OpenGL/dependencies/implot/implot_items.cpp
 
 CMakeFiles/MyApp.dir/dependencies/implot/implot_items.cpp.i: cmake_force
@@ -243,7 +271,7 @@ CMakeFiles/MyApp.dir/dependencies/implot/implot_items.cpp.s: cmake_force
 CMakeFiles/MyApp.dir/dependencies/implot/implot_demo.cpp.o: CMakeFiles/MyApp.dir/flags.make
 CMakeFiles/MyApp.dir/dependencies/implot/implot_demo.cpp.o: /home/pavel/Dev/OpenGL/dependencies/implot/implot_demo.cpp
 CMakeFiles/MyApp.dir/dependencies/implot/implot_demo.cpp.o: CMakeFiles/MyApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/MyApp.dir/dependencies/implot/implot_demo.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/MyApp.dir/dependencies/implot/implot_demo.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyApp.dir/dependencies/implot/implot_demo.cpp.o -MF CMakeFiles/MyApp.dir/dependencies/implot/implot_demo.cpp.o.d -o CMakeFiles/MyApp.dir/dependencies/implot/implot_demo.cpp.o -c /home/pavel/Dev/OpenGL/dependencies/implot/implot_demo.cpp
 
 CMakeFiles/MyApp.dir/dependencies/implot/implot_demo.cpp.i: cmake_force
@@ -257,6 +285,8 @@ CMakeFiles/MyApp.dir/dependencies/implot/implot_demo.cpp.s: cmake_force
 # Object files for target MyApp
 MyApp_OBJECTS = \
 "CMakeFiles/MyApp.dir/src/Application.cpp.o" \
+"CMakeFiles/MyApp.dir/src/Entity.cpp.o" \
+"CMakeFiles/MyApp.dir/src/MyCamera.cpp.o" \
 "CMakeFiles/MyApp.dir/src/MyShader.cpp.o" \
 "CMakeFiles/MyApp.dir/src/Shape.cpp.o" \
 "CMakeFiles/MyApp.dir/dependencies/imgui/imgui.cpp.o" \
@@ -274,6 +304,8 @@ MyApp_OBJECTS = \
 MyApp_EXTERNAL_OBJECTS =
 
 MyApp: CMakeFiles/MyApp.dir/src/Application.cpp.o
+MyApp: CMakeFiles/MyApp.dir/src/Entity.cpp.o
+MyApp: CMakeFiles/MyApp.dir/src/MyCamera.cpp.o
 MyApp: CMakeFiles/MyApp.dir/src/MyShader.cpp.o
 MyApp: CMakeFiles/MyApp.dir/src/Shape.cpp.o
 MyApp: CMakeFiles/MyApp.dir/dependencies/imgui/imgui.cpp.o
@@ -291,7 +323,7 @@ MyApp: CMakeFiles/MyApp.dir/compiler_depend.ts
 MyApp: /usr/lib/libGL.so
 MyApp: /usr/lib/libGLU.so
 MyApp: CMakeFiles/MyApp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable MyApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/pavel/Dev/OpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable MyApp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MyApp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

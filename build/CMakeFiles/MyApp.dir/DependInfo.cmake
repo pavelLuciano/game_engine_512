@@ -19,6 +19,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/pavel/Dev/OpenGL/dependencies/implot/implot_demo.cpp" "CMakeFiles/MyApp.dir/dependencies/implot/implot_demo.cpp.o" "gcc" "CMakeFiles/MyApp.dir/dependencies/implot/implot_demo.cpp.o.d"
   "/home/pavel/Dev/OpenGL/dependencies/implot/implot_items.cpp" "CMakeFiles/MyApp.dir/dependencies/implot/implot_items.cpp.o" "gcc" "CMakeFiles/MyApp.dir/dependencies/implot/implot_items.cpp.o.d"
   "/home/pavel/Dev/OpenGL/src/Application.cpp" "CMakeFiles/MyApp.dir/src/Application.cpp.o" "gcc" "CMakeFiles/MyApp.dir/src/Application.cpp.o.d"
+  "/home/pavel/Dev/OpenGL/src/Entity.cpp" "CMakeFiles/MyApp.dir/src/Entity.cpp.o" "gcc" "CMakeFiles/MyApp.dir/src/Entity.cpp.o.d"
+  "/home/pavel/Dev/OpenGL/src/MyCamera.cpp" "CMakeFiles/MyApp.dir/src/MyCamera.cpp.o" "gcc" "CMakeFiles/MyApp.dir/src/MyCamera.cpp.o.d"
   "/home/pavel/Dev/OpenGL/src/MyShader.cpp" "CMakeFiles/MyApp.dir/src/MyShader.cpp.o" "gcc" "CMakeFiles/MyApp.dir/src/MyShader.cpp.o.d"
   "/home/pavel/Dev/OpenGL/src/Shape.cpp" "CMakeFiles/MyApp.dir/src/Shape.cpp.o" "gcc" "CMakeFiles/MyApp.dir/src/Shape.cpp.o.d"
   "" "MyApp" "gcc" "CMakeFiles/MyApp.dir/link.d"
