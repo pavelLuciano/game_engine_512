@@ -1,7 +1,12 @@
 CMakeFiles/MyApp.dir/src/MyShader.cpp.o: \
  /home/pavel/Dev/OpenGL/src/MyShader.cpp /usr/include/stdc-predef.h \
- /home/pavel/Dev/OpenGL/include/MyShader.h /usr/include/GL/glew.h \
- /usr/include/c++/14.2.1/cstddef \
+ /home/pavel/Dev/OpenGL/include/classes/MyShader.h \
+ /home/pavel/Dev/OpenGL/include/classes/MyCamera.h \
+ /home/pavel/Dev/OpenGL/include/classes/Entity.h \
+ /home/pavel/Dev/OpenGL/dependencies/glm/glm.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/detail/_fixes.hpp \
+ /usr/include/c++/14.2.1/cmath \
+ /usr/include/c++/14.2.1/bits/requires_hosted.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -10,20 +15,10 @@ CMakeFiles/MyApp.dir/src/MyShader.cpp.o: \
  /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h \
  /usr/include/c++/14.2.1/pstl/pstl_config.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
- /usr/include/c++/14.2.1/bits/version.h /usr/include/c++/14.2.1/cstdint \
- /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \
- /usr/include/stdint.h /usr/include/bits/libc-header-start.h \
- /usr/include/bits/types.h /usr/include/bits/typesizes.h \
- /usr/include/bits/time64.h /usr/include/bits/wchar.h \
- /usr/include/bits/stdint-intn.h /usr/include/bits/stdint-uintn.h \
- /usr/include/bits/stdint-least.h /usr/include/GL/glu.h \
- /usr/include/GL/gl.h /home/pavel/Dev/OpenGL/dependencies/glm/glm.hpp \
- /home/pavel/Dev/OpenGL/dependencies/glm/detail/_fixes.hpp \
- /usr/include/c++/14.2.1/cmath \
- /usr/include/c++/14.2.1/bits/requires_hosted.h \
  /usr/include/c++/14.2.1/bits/cpp_type_traits.h \
  /usr/include/c++/14.2.1/ext/type_traits.h /usr/include/math.h \
+ /usr/include/bits/libc-header-start.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/bits/time64.h \
  /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
  /usr/include/bits/floatn.h /usr/include/bits/floatn-common.h \
  /usr/include/bits/flt-eval-method.h /usr/include/bits/fp-logb.h \
@@ -31,11 +26,13 @@ CMakeFiles/MyApp.dir/src/MyShader.cpp.o: \
  /usr/include/bits/mathcalls-helper-functions.h \
  /usr/include/bits/mathcalls.h /usr/include/bits/mathcalls-narrow.h \
  /usr/include/bits/iscanonical.h /usr/include/c++/14.2.1/bits/std_abs.h \
- /usr/include/stdlib.h /usr/include/bits/waitflags.h \
- /usr/include/bits/waitstatus.h /usr/include/bits/types/locale_t.h \
- /usr/include/bits/types/__locale_t.h /usr/include/sys/types.h \
- /usr/include/bits/types/clock_t.h /usr/include/bits/types/clockid_t.h \
- /usr/include/bits/types/time_t.h /usr/include/bits/types/timer_t.h \
+ /usr/include/stdlib.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
+ /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+ /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
+ /usr/include/sys/types.h /usr/include/bits/types/clock_t.h \
+ /usr/include/bits/types/clockid_t.h /usr/include/bits/types/time_t.h \
+ /usr/include/bits/types/timer_t.h /usr/include/bits/stdint-intn.h \
  /usr/include/endian.h /usr/include/bits/endian.h \
  /usr/include/bits/endianness.h /usr/include/bits/byteswap.h \
  /usr/include/bits/uintn-identity.h /usr/include/sys/select.h \
@@ -47,7 +44,8 @@ CMakeFiles/MyApp.dir/src/MyShader.cpp.o: \
  /usr/include/bits/pthreadtypes-arch.h \
  /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
- /usr/include/bits/stdlib-float.h /usr/include/c++/14.2.1/bits/specfun.h \
+ /usr/include/bits/stdlib-float.h /usr/include/c++/14.2.1/bits/version.h \
+ /usr/include/c++/14.2.1/bits/specfun.h \
  /usr/include/c++/14.2.1/bits/stl_algobase.h \
  /usr/include/c++/14.2.1/bits/functexcept.h \
  /usr/include/c++/14.2.1/bits/exception_defines.h \
@@ -78,7 +76,12 @@ CMakeFiles/MyApp.dir/src/MyShader.cpp.o: \
  /usr/include/c++/14.2.1/tr1/riemann_zeta.tcc \
  /home/pavel/Dev/OpenGL/dependencies/glm/detail/setup.hpp \
  /usr/include/c++/14.2.1/cassert /usr/include/assert.h \
+ /usr/include/c++/14.2.1/cstddef \
  /home/pavel/Dev/OpenGL/dependencies/glm/detail/../simd/platform.h \
+ /usr/include/c++/14.2.1/cstdint \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/wchar.h \
+ /usr/include/bits/stdint-uintn.h /usr/include/bits/stdint-least.h \
  /usr/include/c++/14.2.1/climits \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/limits.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/syslimits.h \
@@ -261,6 +264,60 @@ CMakeFiles/MyApp.dir/src/MyShader.cpp.o: \
  /home/pavel/Dev/OpenGL/dependencies/glm/detail/type_half.inl \
  /home/pavel/Dev/OpenGL/dependencies/glm/integer.hpp \
  /home/pavel/Dev/OpenGL/dependencies/glm/detail/func_integer.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/matrix_transform.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/matrix_projection.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/../gtc/constants.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/../gtc/../ext/scalar_constants.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/../gtc/../ext/../detail/setup.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/../gtc/../ext/scalar_constants.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/../gtc/constants.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/matrix_projection.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/matrix_clip_space.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/matrix_clip_space.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/matrix_transform.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/matrix_transform.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/matrix_transform.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/type_ptr.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/quaternion.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_relational.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_relational.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/../detail/type_float.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/../detail/setup.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/quaternion_common.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/../ext/quaternion_geometric.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/../ext/quaternion_geometric.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/quaternion_common.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/quaternion_float.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/../detail/type_quat.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/../detail/../ext/quaternion_relational.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/../detail/../ext/quaternion_relational.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/../detail/type_quat.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/quaternion_float_precision.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/quaternion_double.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/quaternion_double_precision.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/quaternion_trigonometric.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/quaternion_trigonometric.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/quaternion_transform.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/quaternion_transform.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/quaternion.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/epsilon.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../detail/setup.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/epsilon.inl \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/vec1.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_bool1.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_bool1_precision.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_float1.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_float1_precision.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_double1.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_double1_precision.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_int1.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_int1_sized.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_uint1.hpp \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_uint1_sized.hpp \
+ /usr/include/c++/14.2.1/cstring /usr/include/string.h \
+ /usr/include/strings.h \
+ /home/pavel/Dev/OpenGL/dependencies/glm/gtc/type_ptr.inl \
+ /usr/include/GL/glew.h /usr/include/GL/glu.h /usr/include/GL/gl.h \
  /usr/include/c++/14.2.1/string /usr/include/c++/14.2.1/bits/stringfwd.h \
  /usr/include/c++/14.2.1/bits/char_traits.h \
  /usr/include/c++/14.2.1/bits/postypes.h /usr/include/c++/14.2.1/cwchar \

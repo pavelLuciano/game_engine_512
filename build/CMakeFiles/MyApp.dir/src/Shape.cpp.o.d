@@ -1,7 +1,7 @@
 CMakeFiles/MyApp.dir/src/Shape.cpp.o: \
  /home/pavel/Dev/OpenGL/src/Shape.cpp /usr/include/stdc-predef.h \
- /home/pavel/Dev/OpenGL/include/Shape.h \
- /home/pavel/Dev/OpenGL/include/Entity.h \
+ /home/pavel/Dev/OpenGL/include/classes/Shape.h \
+ /home/pavel/Dev/OpenGL/include/classes/Entity.h \
  /home/pavel/Dev/OpenGL/dependencies/glm/glm.hpp \
  /home/pavel/Dev/OpenGL/dependencies/glm/detail/_fixes.hpp \
  /usr/include/c++/14.2.1/cmath \
@@ -316,8 +316,9 @@ CMakeFiles/MyApp.dir/src/Shape.cpp.o: \
  /usr/include/c++/14.2.1/cstring /usr/include/string.h \
  /usr/include/strings.h \
  /home/pavel/Dev/OpenGL/dependencies/glm/gtc/type_ptr.inl \
- /home/pavel/Dev/OpenGL/include/iDrawable.h \
- /home/pavel/Dev/OpenGL/include/MyShader.h /usr/include/GL/glew.h \
+ /home/pavel/Dev/OpenGL/include/interfaces/iDrawable.h \
+ /home/pavel/Dev/OpenGL/include/classes/MyShader.h \
+ /home/pavel/Dev/OpenGL/include/classes/MyCamera.h /usr/include/GL/glew.h \
  /usr/include/GL/glu.h /usr/include/GL/gl.h \
  /usr/include/c++/14.2.1/string /usr/include/c++/14.2.1/bits/stringfwd.h \
  /usr/include/c++/14.2.1/bits/char_traits.h \

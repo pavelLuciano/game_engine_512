@@ -1,7 +1,7 @@
 CMakeFiles/MyApp.dir/src/MyCamera.cpp.o: \
  /home/pavel/Dev/OpenGL/src/MyCamera.cpp /usr/include/stdc-predef.h \
- /home/pavel/Dev/OpenGL/include/MyCamera.h \
- /home/pavel/Dev/OpenGL/include/Entity.h \
+ /home/pavel/Dev/OpenGL/include/classes/MyCamera.h \
+ /home/pavel/Dev/OpenGL/include/classes/Entity.h \
  /home/pavel/Dev/OpenGL/dependencies/glm/glm.hpp \
  /home/pavel/Dev/OpenGL/dependencies/glm/detail/_fixes.hpp \
  /usr/include/c++/14.2.1/cmath \

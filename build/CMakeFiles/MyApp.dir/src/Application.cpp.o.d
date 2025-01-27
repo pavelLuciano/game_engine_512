@@ -333,8 +333,8 @@ CMakeFiles/MyApp.dir/src/Application.cpp.o: \
  /home/pavel/Dev/OpenGL/dependencies/imgui/backends/imgui_impl_glfw.h \
  /home/pavel/Dev/OpenGL/dependencies/implot/implot.h \
  /home/pavel/Dev/OpenGL/include/init_deps.h \
- /home/pavel/Dev/OpenGL/include/Box.h \
- /home/pavel/Dev/OpenGL/include/Entity.h \
+ /home/pavel/Dev/OpenGL/include/engine/engine512_gui.h \
+ /home/pavel/Dev/OpenGL/include/classes/Entity.h \
  /home/pavel/Dev/OpenGL/dependencies/glm/gtc/matrix_transform.hpp \
  /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/matrix_projection.hpp \
  /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/../gtc/constants.hpp \
@@ -387,12 +387,15 @@ CMakeFiles/MyApp.dir/src/Application.cpp.o: \
  /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../gtc/../ext/vector_uint1_sized.hpp \
  /usr/include/c++/14.2.1/cstring \
  /home/pavel/Dev/OpenGL/dependencies/glm/gtc/type_ptr.inl \
- /home/pavel/Dev/OpenGL/include/iDrawable.h \
- /home/pavel/Dev/OpenGL/include/MyShader.h \
+ /home/pavel/Dev/OpenGL/include/classes/Box.h \
+ /home/pavel/Dev/OpenGL/include/classes/Entity.h \
+ /home/pavel/Dev/OpenGL/include/interfaces/iDrawable.h \
+ /home/pavel/Dev/OpenGL/include/classes/MyShader.h \
+ /home/pavel/Dev/OpenGL/include/classes/MyCamera.h \
  /usr/include/c++/14.2.1/fstream /usr/include/c++/14.2.1/bits/codecvt.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++io.h \
  /usr/include/c++/14.2.1/bits/fstream.tcc /usr/include/c++/14.2.1/sstream \
  /usr/include/c++/14.2.1/bits/sstream.tcc \
- /home/pavel/Dev/OpenGL/include/Shape.h \
- /home/pavel/Dev/OpenGL/include/MyShader.h
+ /home/pavel/Dev/OpenGL/include/classes/Shape.h \
+ /home/pavel/Dev/OpenGL/include/classes/MyCamera.h

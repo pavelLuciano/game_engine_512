@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/pavel/Dev/OpenGL/include -I/home/pavel/Dev/OpenGL/dependencies -I/home/pavel/Dev/OpenGL/dependencies/imgui -I/home/pavel/Dev/OpenGL/dependencies/implot
+CXX_INCLUDES = -I/home/pavel/Dev/OpenGL/include -I/home/pavel/Dev/OpenGL/dependencies -I/home/pavel/Dev/OpenGL/dependencies/imgui -I/home/pavel/Dev/OpenGL/dependencies/implot -I/home/pavel/Dev/OpenGL/include/interfaces -I/home/pavel/Dev/OpenGL/include/classes -I/home/pavel/Dev/OpenGL/include/engine
 
 CXX_FLAGS = -std=gnu++17
 
