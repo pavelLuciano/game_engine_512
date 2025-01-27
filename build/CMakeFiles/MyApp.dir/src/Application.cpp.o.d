@@ -333,7 +333,7 @@ CMakeFiles/MyApp.dir/src/Application.cpp.o: \
  /home/pavel/Dev/OpenGL/dependencies/imgui/backends/imgui_impl_glfw.h \
  /home/pavel/Dev/OpenGL/dependencies/implot/implot.h \
  /home/pavel/Dev/OpenGL/include/init_deps.h \
- /home/pavel/Dev/OpenGL/include/Shape.h \
+ /home/pavel/Dev/OpenGL/include/Box.h \
  /home/pavel/Dev/OpenGL/include/Entity.h \
  /home/pavel/Dev/OpenGL/dependencies/glm/gtc/matrix_transform.hpp \
  /home/pavel/Dev/OpenGL/dependencies/glm/gtc/../ext/matrix_projection.hpp \
@@ -394,4 +394,5 @@ CMakeFiles/MyApp.dir/src/Application.cpp.o: \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++io.h \
  /usr/include/c++/14.2.1/bits/fstream.tcc /usr/include/c++/14.2.1/sstream \
  /usr/include/c++/14.2.1/bits/sstream.tcc \
+ /home/pavel/Dev/OpenGL/include/Shape.h \
  /home/pavel/Dev/OpenGL/include/MyShader.h

@@ -2152,6 +2152,7 @@ CMakeFiles/MyApp.dir/src/Application.cpp.o
  /home/pavel/Dev/OpenGL/dependencies/imgui/imconfig.h
  /home/pavel/Dev/OpenGL/dependencies/imgui/imgui.h
  /home/pavel/Dev/OpenGL/dependencies/implot/implot.h
+ /home/pavel/Dev/OpenGL/include/Box.h
  /home/pavel/Dev/OpenGL/include/Entity.h
  /home/pavel/Dev/OpenGL/include/MyShader.h
  /home/pavel/Dev/OpenGL/include/Shape.h
