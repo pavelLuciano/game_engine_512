@@ -1,1 +1,0 @@
- -lopengl32 -lglu32 -lglfw3 -lglew32 -lopengl32 -lassimp -lglu32 -lglfw3 -lglew32 -lassimp -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

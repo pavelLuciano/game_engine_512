@@ -1,3 +1,0 @@
-C:/Users/lucia/dev/game_engine_512/build/CMakeFiles/MyApp.dir
-C:/Users/lucia/dev/game_engine_512/build/CMakeFiles/edit_cache.dir
-C:/Users/lucia/dev/game_engine_512/build/CMakeFiles/rebuild_cache.dir
