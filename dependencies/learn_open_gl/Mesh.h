@@ -16,7 +16,7 @@ using namespace std;
 
 #define MAX_BONE_INFLUENCE 4
 
-namespace logl{
+namespace learn_ogl{
 
 struct Vertex {
     // position

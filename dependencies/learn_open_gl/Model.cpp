@@ -2,7 +2,7 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 
-namespace logl{
+namespace learn_ogl{
 
     void Model::loadModel(string const &path)
     {

@@ -41,30 +41,60 @@ list(APPEND SOURCES
     "${IMGUI_DIR}/backends/imgui_impl_glfw.cpp"
     "${IMGUI_DIR}/backends/imgui_impl_opengl3.cpp"
 )
-#añadir fuentes especificas de ImPlot
+
+# Añadir fuentes específicas de ImPlot
 list(APPEND SOURCES
     "${IMPLOT_DIR}/implot.cpp"
     "${IMPLOT_DIR}/implot_items.cpp"
     "${IMPLOT_DIR}/implot_demo.cpp"
 )
-#otra forma mas rapida de hacerlo
+
+# Añadir otras fuentes
 list(APPEND SOURCES
-    "${LOGL_DIR/Camera.cpp}"
-    "${LOGL_DIR/Mesh.cpp}"
-    "${LOGL_DIR/Model.cpp}"
+    "${LOGL_DIR}/Camera.cpp"
+    "${LOGL_DIR}/Mesh.cpp"
+    "${LOGL_DIR}/Model.cpp"
 )
 
 # Definir el ejecutable
 add_executable(MyApp ${SOURCES})
 
-# Librerías y banderas
-find_package(OpenGL REQUIRED)
-find_package(Threads REQUIRED)
+# Configurar las librerías dependiendo del sistema operativo
+if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    message(STATUS "Compilando en Linux")
 
-target_link_libraries(MyApp
-    ${CMAKE_THREAD_LIBS_INIT}
-    ${OPENGL_LIBRARIES}
-    glfw
-    GLEW
-    assimp
-)
+    # Librerías en Linux
+    find_package(OpenGL REQUIRED)
+    find_package(Threads REQUIRED)
+
+    target_link_libraries(MyApp
+        ${CMAKE_THREAD_LIBS_INIT}
+        ${OPENGL_LIBRARIES}
+        glfw
+        GLEW
+        assimp
+    )
+
+elseif(CMAKE_SYSTEM_NAME STREQUAL "Windows")
+    message(STATUS "Compilando en Windows (MSYS2 UCRT64)")
+
+    # Ajustar el compilador para MSYS2 UCRT64
+    set(CMAKE_C_COMPILER "C:/msys64/ucrt64/bin/gcc.exe")
+    set(CMAKE_CXX_COMPILER "C:/msys64/ucrt64/bin/g++.exe")
+
+    # Incluir los directorios de las librerías
+    include_directories("C:/msys64/ucrt64/include")
+    link_directories("C:/msys64/ucrt64/lib")
+
+    # Librerías en Windows
+    find_package(OpenGL REQUIRED)
+
+    target_link_libraries(MyApp
+        ${CMAKE_THREAD_LIBS_INIT}
+        ${OPENGL_LIBRARIES}
+        glfw3
+        glew32
+        opengl32
+        assimp
+    )
+endif()

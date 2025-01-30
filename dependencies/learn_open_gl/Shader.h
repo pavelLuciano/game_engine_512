@@ -9,7 +9,7 @@
 #include <sstream>
 #include <iostream>
 
-namespace logl{
+namespace learn_ogl{
 
     class Shader
     {

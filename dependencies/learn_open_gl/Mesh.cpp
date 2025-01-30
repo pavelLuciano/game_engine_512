@@ -1,5 +1,5 @@
 #include "Mesh.h"
-namespace logl{
+namespace learn_ogl{
 
     Mesh::Mesh(vector<Vertex> vertices, vector<unsigned int> indices, vector<Texture> textures)
     {
