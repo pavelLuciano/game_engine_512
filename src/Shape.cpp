@@ -3,8 +3,6 @@
 #include <sstream>
 #include <vector>
 
-
-
 //falta una funcion que analice el formato y modularizar mas aun esto
 Shape::Shape(const char* file_path)
 {
@@ -54,7 +52,7 @@ void Shape::loadFromFile(const char* file_path)
                 iss >> y;
                 iss >> z;
                 this->vertex_data.push_back({
-                        glm::vec3(std::stof(x), std::stof(y), std::stof(y)),
+                        glm::vec3(std::stof(x), std::stof(y), std::stof(z)),
                         glm::vec3(0.0f, 0.0f, 0.0f),
                         glm::vec2(0.0f, 0.0f)
                 });
@@ -81,6 +79,7 @@ void Shape::loadFromFile(const char* file_path)
             break;
         }
     }
+    vertex_data_file.close();
 }
 void Shape::setup()
 {
@@ -111,6 +110,13 @@ void Shape::setup()
 void Shape::draw(MyShader &shader)
 {
     shader.use();
+    glm::mat4 model = glm::mat4(1.0f);
+    model = glm::translate(model, getPosition());
+    model = glm::scale(model, getScale());
+    model = glm::rotate(model, glm::radians(pitch()), glm::vec3(1,0,0));
+    model = glm::rotate(model, glm::radians(yaw()), glm::vec3(0,1,0));
+    model = glm::rotate(model, glm::radians(roll()), glm::vec3(0,0,1));
+    shader.setMat4("model", model);
     glBindVertexArray(VAO);
     glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0);
     glBindVertexArray(0);

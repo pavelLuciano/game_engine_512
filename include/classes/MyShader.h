@@ -1,9 +1,10 @@
 #ifndef SHADER_H
 #define SHADER_H
 
+#include "MyCamera.h"
+
 #include <GL/glew.h>
 #include <glm/glm.hpp>
-
 #include <string>
 #include <vector>
 #include <fstream>
@@ -28,6 +29,10 @@ public:
     unsigned int getID() const;
     void use() const;
     bool isCompiled();
+
+    
+    void setCamera(MyCamera);
+    void setMat4(const std::string& name, const glm::mat4& matrix) const;
 
 private:
     bool compileShaderProgram(const char*, const char*);

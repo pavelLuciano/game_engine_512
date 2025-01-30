@@ -102,3 +102,12 @@ bool MyShader::isCompiled()
 {
     return this->program_id != NO_COMPILED_PROGRAM;
 }
+void MyShader::setCamera(MyCamera camera)
+{
+    setMat4("view", camera.getViewMat());
+    setMat4("projection", camera.getProjectionMat());
+}
+void MyShader::setMat4(const std::string& name, const glm::mat4& matrix) const
+{
+    glUniformMatrix4fv(glGetUniformLocation(program_id, name.c_str()), 1, GL_FALSE, &matrix[0][0]);
+}

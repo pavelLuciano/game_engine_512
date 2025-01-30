@@ -8,8 +8,11 @@
 #include "implot.h"
 
 #include "init_deps.h"
+#include "engine512_gui.h"
+#include "Box.h"
 #include "Shape.h"
-
+#include "MyShader.h"
+#include "MyCamera.h"
 
 
 /////////////////////////////////////////////////////////////////////////
@@ -24,8 +27,14 @@ int main()
     GLFWwindow* mi_ventana = initDepsAndCreateWin();
     if (!mi_ventana) return EXIT_FAILURE;
 
+    //camara
+    MyCamera camara;
     //figura dibujable
-    Shape caja("../resources/shapes/box.shape");
+    Shape cajita("../resources/shapes/box.shape");
+
+    //Box cajita;
+
+
 
     //shader
     MyShader mi_shader("../resources/shaders/vertex_shader.shader", "../resources/shaders/fragment_shader.shader");
@@ -53,15 +62,15 @@ int main()
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
 
+        ImGui::ShowDemoWindow();
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        ImGui::Begin("Caja");
-
-    
-        ImGui::End();
-
-        caja.draw(mi_shader);
+        //modificador del objeto caja
+        mi_shader.setCamera(camara);
+        Engine512::entityMenu(&cajita, "Caja");
+        
+        cajita.draw(mi_shader);
 
         ImGui::Render();
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());

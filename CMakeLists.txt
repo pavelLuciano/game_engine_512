@@ -15,12 +15,18 @@ set(GLM_DIR         "${DEPS_DIR}/glm")
 set(IMGUI_DIR       "${DEPS_DIR}/imgui")
 set(IMPLOT_DIR      "${DEPS_DIR}/implot")
 set(LOGL_DIR        "${DEPS_DIR}/learn_open_gl")
+set(INTEFACE_DIR    "${INCLUDE_DIR}/interfaces")
+set(CLASS_DIR       "${INCLUDE_DIR}/classes")
+set(ENGINE_DIR      "${INCLUDE_DIR}/engine")
 
 # Incluir los directorios de cabeceras
 include_directories(${INCLUDE_DIR})
 include_directories(${DEPS_DIR})
 include_directories(${IMGUI_DIR})
 include_directories(${IMPLOT_DIR})
+include_directories(${INTEFACE_DIR})
+include_directories(${CLASS_DIR})
+include_directories(${ENGINE_DIR})
 
 # Buscar los archivos fuente en src/
 file(GLOB SOURCES "${SRC_DIR}/*.cpp")
