@@ -6,7 +6,6 @@
 #include "backends/imgui_impl_glfw.h"
 #include "imgui.h"
 #include "implot.h"
-
 #include "init_deps.h"
 #include "Shape.h"
 

@@ -1,5 +1,5 @@
 #include "Camera.h"
-namespace logl{
+namespace learn_ogl{
 
     glm::mat4 Camera::GetViewMatrix()
     {
