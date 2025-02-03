@@ -2,6 +2,7 @@
 #define _ENGINE512_GUI_H
 
 #include "Entity.h"
+#include "MyCamera.h"
 #include "backends/imgui_impl_opengl3.h"
 #include "backends/imgui_impl_glfw.h"
 #include "imgui.h"
@@ -16,7 +17,7 @@ namespace Engine512
         static float rot[3] = { 0.0f, 0.0f, 0.0f };
         static float scale[3] = {1.0f, 1.0f, 1.0f};
         
-        ImGui::Begin("Caja");
+        ImGui::Begin(label.c_str());
         ImGui::InputFloat3("Position", pos);
         ImGui::InputFloat3("Rotation", rot);
         ImGui::InputFloat3("Scale", scale);
@@ -32,9 +33,23 @@ namespace Engine512
         ImGui::End();
     }
 
-    void cameraMenu()
+    void cameraMenu(MyCamera* cam, std::string label = "Camera")
     {
-
+        static float pos[3] = { 0.0f, 0.0f, 0.0f };
+        static float rot[3] = { 0.0f, 0.0f, 0.0f };
+        static bool ortho = false;
+        ImGui::Begin(label.c_str());
+        ImGui::InputFloat3("Position", pos);
+        ImGui::InputFloat3("Rotation", rot);
+        ImGui::Checkbox("orthogonal", &ortho);
+        cam->setX(pos[0]);
+        cam->setY(pos[1]);
+        cam->setZ(pos[2]);
+        cam->setPitch(rot[0]);
+        cam->setYaw(rot[1]);
+        cam->setRoll(rot[2]);
+        cam->setProjection(ortho);
+        ImGui::End();
     }
 }
 

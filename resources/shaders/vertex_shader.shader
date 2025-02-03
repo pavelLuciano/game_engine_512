@@ -10,6 +10,12 @@ out vec3 ourColor; // output a color to the fragment shader
 
 void main()
 {
+    mat4 A = mat4(0.5, 0.0, 0.0, 0.0,
+                  0.0, 0.5, 0.0, 0.0,
+                  0.0, 0.0, 0.5, 0.0,
+                  0.0, 0.0, 0.0, 1.0
+                );
     gl_Position = projection * view * model * vec4(aPos, 1.0);
     ourColor = aColor; // set ourColor to the input color we got from the vertex data
+
 } 

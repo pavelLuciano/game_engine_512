@@ -54,9 +54,6 @@ private:
         float _scaleZ;
     } transform;
 
-
-
-
 };
 
 #endif

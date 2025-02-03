@@ -4,7 +4,7 @@
 #include <vector>
 
 //falta una funcion que analice el formato y modularizar mas aun esto
-Shape::Shape(const char* file_path)
+Shape::Shape(const char* file_path): Entity()
 {
     loadFromFile(file_path);
     setup();
@@ -23,6 +23,8 @@ void Shape::loadFromFile(const char* file_path)
     };
     std::ifstream vertex_data_file(file_path);
     std::string line;
+    std::vector<glm::vec3> vertices;
+    std::vector<glm::vec3> colors;
 
     Mode current_mode = INDICES;
     while(getline(vertex_data_file, line))
@@ -51,23 +53,17 @@ void Shape::loadFromFile(const char* file_path)
                 iss >> x;
                 iss >> y;
                 iss >> z;
-                this->vertex_data.push_back({
-                        glm::vec3(std::stof(x), std::stof(y), std::stof(z)),
-                        glm::vec3(0.0f, 0.0f, 0.0f),
-                        glm::vec2(0.0f, 0.0f)
-                });
+                vertices.push_back(glm::vec3(std::stof(x), std::stof(y), std::stof(z)));
             }
             break;
             case COLORS:
             {
-                static int index = 0;
                 std::istringstream iss(line);
                 std::string R, G, B;
                 iss >> R;
                 iss >> G;
                 iss >> B;
-                this->vertex_data[index].color = glm::vec3(std::stof(R), std::stof(G), std::stof(B));
-                index++;
+                colors.push_back (glm::vec3(std::stof(R), std::stof(G), std::stof(B)));
             }
             break;
             case INDICES:
@@ -78,6 +74,10 @@ void Shape::loadFromFile(const char* file_path)
             }
             break;
         }
+    }
+    for (int i = 0; i< vertices.size(); i++)
+    {
+        this->vertex_data.push_back({vertices[i], colors[i], glm::vec2(0.0f,0.0f)});
     }
     vertex_data_file.close();
 }

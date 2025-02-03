@@ -29,10 +29,18 @@ int main()
     //camara
     MyCamera camara;
     //figura dibujable
+
+    Shape otra_caja("../resources/shapes/box.shape");
+    //Shape triangulo("../resources/shapes/triangle.shape");
+    //Box cajita;
     Shape cajita("../resources/shapes/box.shape");
 
-    //Box cajita;
+    otra_caja.setX(1.0f);
+    otra_caja.setY(1.0f);
+    otra_caja.setZ(-10.0f);
 
+    otra_caja.printVertex();
+    cajita.printVertex();
 
 
     //shader
@@ -67,9 +75,12 @@ int main()
 
         //modificador del objeto caja
         mi_shader.setCamera(camara);
-        Engine512::entityMenu(&cajita, "Caja");
-        
+        //Engine512::entityMenu(&cajita, "Caja");
+        //Engine512::cameraMenu(&camara);
+
         cajita.draw(mi_shader);
+        otra_caja.draw(mi_shader);
+        //triangulo.draw(mi_shader);
 
         ImGui::Render();
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());

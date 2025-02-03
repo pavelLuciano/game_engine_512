@@ -19,6 +19,11 @@ public:
     ~Shape();
     void draw(MyShader&) override;
 
+    void printVertex()
+    {
+        for (auto v: vertex_data) printVertex(v);
+    }
+
 private:
     std::vector<Vertex> vertex_data;
     std::vector<unsigned int> indices;
@@ -34,6 +39,8 @@ private:
         std::cout << v.position[0] << " " << v.position[1] << " " << v.position[2] 
                   << " " << v.color[0] << " " << v.color[1] << " " << v.color[2] << std::endl;
     }
+
+
 };
 
 #endif

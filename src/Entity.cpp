@@ -6,7 +6,7 @@ Entity::Entity()
 {
     transform = {0.0, 0.0, 0.0,
                  0.0, 0.0, 0.0,
-                 1.0};
+                 1.0, 1.0, 1.0};
 }
 void Entity::setX(float x){transform._x = x;}
 void Entity::setY(float y){transform._y = y;}

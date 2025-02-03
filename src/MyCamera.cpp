@@ -7,6 +7,11 @@ MyCamera::MyCamera()
 
 void MyCamera::setPerspective(){orthographic = false;}
 void MyCamera::setOrthographic(){orthographic = true;}
+void MyCamera::setProjection(bool b)
+{
+    if (b) setOrthographic();
+    else setPerspective();
+}
 
 //modificar
 glm::mat4 MyCamera::getViewMat()
@@ -15,6 +20,6 @@ glm::mat4 MyCamera::getViewMat()
 }
 glm::mat4 MyCamera::getProjectionMat()
 {
-    if (orthographic) return glm::ortho(0.0f, 600.0f, 0.0f, 600.0f, 0.1f, 100.0f);
+    if (orthographic) return glm::ortho(-1.0f, 1.0f, -1.0f, 1.0f, 0.1f, 100.0f);
     else return glm::perspective(glm::radians(fov), 600.0f / 600.0f, 0.1f, 100.0f);
 }
