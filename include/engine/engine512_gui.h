@@ -11,6 +11,19 @@
 
 namespace Engine512
 {
+    struct clock
+    {
+        float deltaTime = 0.0f;
+        float lastFrame = 0.0f;
+
+        void updateFrame()
+        {
+            float currentFrame = static_cast<float>(glfwGetTime());
+            deltaTime = currentFrame - lastFrame;
+            lastFrame = currentFrame;
+        }
+    };
+
     void entityMenu(Entity* e, std::string label = "Entity")
     {
         static float pos[3] = { 0.0f, 0.0f, 0.0f };
@@ -25,7 +38,7 @@ namespace Engine512
         e->setY(pos[1]);
         e->setZ(pos[2]);
         e->setPitch(rot[0]);
-        e->setYaw(45.0f*glfwGetTime());
+        e->setYaw(rot[1]);
         e->setRoll(rot[2]);
         e->scaleX(scale[0]);
         e->scaleY(scale[1]);

@@ -11,7 +11,31 @@
 #define HEIGHT 600
 #define WIDTH  800
 
+struct mouseData
+{
+    float lastX = 600.0f / 2.0f;
+    float lastY =  600.0f / 2.0f;
+    bool firstMouse = true;
+    bool newOffsets = false;
+
+    float xOffset;
+    float yOffset;
+
+    bool hasUnprocesedOffsets()
+    {
+        if (newOffsets)
+        {
+            newOffsets = false;
+            return true;
+        }
+        else return false;
+    }
+    
+} mouse;
+
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
+void mouse_callback(GLFWwindow* window, double xposIn, double yposIn);
+void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 
 inline GLFWwindow* initDepsAndCreateWin()
 {
@@ -36,6 +60,11 @@ inline GLFWwindow* initDepsAndCreateWin()
     glfwMakeContextCurrent(mi_ventana);
     glfwSwapInterval(1);
     glfwSetFramebufferSizeCallback(mi_ventana, framebuffer_size_callback);
+    glfwSetCursorPosCallback(mi_ventana, mouse_callback);
+    glfwSetScrollCallback(mi_ventana, scroll_callback);
+
+    // tell GLFW to capture our mouse
+    glfwSetInputMode(mi_ventana, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
     
     if (glewInit() != GLEW_OK) 
     {
@@ -87,4 +116,30 @@ void processInput(GLFWwindow *window)
 {
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
+}
+
+void mouse_callback(GLFWwindow* window, double xposIn, double yposIn)
+{
+    
+    float xpos = static_cast<float>(xposIn);
+    float ypos = static_cast<float>(yposIn);
+    std::cout << "Mouse pos:" << xpos << " " << ypos << std::endl;
+    if (mouse.firstMouse)
+    {
+        mouse.lastX = xpos;
+        mouse.lastY = ypos;
+        mouse.firstMouse = false;
+    }
+
+    mouse.xOffset = xpos - mouse.lastX;
+    mouse.yOffset = mouse.lastY - ypos; // reversed since y-coordinates go from bottom to top
+
+    mouse.lastX = xpos;
+    mouse.lastY = ypos;
+    std::cout << "offset :" << mouse.xOffset <<  " " << mouse.yOffset << std::endl;
+    mouse.newOffsets = true;
+}
+void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
+{
+    //camera.ProcessMouseScroll(static_cast<float>(yoffset));
 }

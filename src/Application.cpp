@@ -10,8 +10,10 @@
 #include "engine512_gui.h"
 #include "Box.h"
 #include "Shape.h"
+#include "IControlable.h"
 #include "MyShader.h"
 #include "MyCamera.h"
+
 
 
 /////////////////////////////////////////////////////////////////////////
@@ -24,6 +26,7 @@ int main()
     //crea la ventana e inicia las librerias necesarias
     // GLFW, GLEW, IMGUI, IMPLOT
     GLFWwindow* mi_ventana = initDepsAndCreateWin();
+    Engine512::clock clock;
     if (!mi_ventana) return EXIT_FAILURE;
 
     //camara
@@ -36,7 +39,7 @@ int main()
     Shape cajita("../resources/shapes/box.shape");
 
     otra_caja.setX(1.0f);
-    otra_caja.setY(1.0f);
+    otra_caja.setY(5.0f);
     otra_caja.setZ(-10.0f);
 
     otra_caja.printVertex();
@@ -51,7 +54,7 @@ int main()
     //bucle de ejecucion
     while (!glfwWindowShouldClose(mi_ventana))
     {
-        
+        clock.updateFrame();
         // Poll and handle events (inputs, window resize, etc.)
         // You can read the io.WantCaptureMouse, io.WantCaptureKeyboard flags to tell if dear imgui wants to use your inputs.
         // - When io.WantCaptureMouse is true, do not dispatch mouse input data to your main application, or clear/overwrite your copy of the mouse data.
@@ -64,6 +67,9 @@ int main()
             continue;
         }
         processInput(mi_ventana);
+        camara.processInput(mi_ventana,clock.deltaTime);
+        if (mouse.hasUnprocesedOffsets())
+            camara.processMouseInput(mouse.xOffset, mouse.yOffset);
         // Start the Dear ImGui frame
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplGlfw_NewFrame();
@@ -75,12 +81,10 @@ int main()
 
         //modificador del objeto caja
         mi_shader.setCamera(camara);
-        //Engine512::entityMenu(&cajita, "Caja");
-        //Engine512::cameraMenu(&camara);
+        Engine512::entityMenu(&cajita, "Caja");
 
         cajita.draw(mi_shader);
         otra_caja.draw(mi_shader);
-        //triangulo.draw(mi_shader);
 
         ImGui::Render();
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());

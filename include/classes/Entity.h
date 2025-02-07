@@ -19,6 +19,9 @@ public:
     glm::vec3 getPosition();
     glm::vec3 getRotation();
     glm::vec3 getScale();
+    glm::vec3 getXAxis();
+    glm::vec3 getYAxis();
+    glm::vec3 getZAxis();
 
     void setX(float);
     void setY(float);
@@ -28,16 +31,20 @@ public:
     void setYaw(float);
     void setRoll(float);
 
-    void rotateX(float);
-    void rotateY(float);
-    void rotateZ(float);
+    void rotateGlobalXAxis();
+    void rotateGlobalYAxis(float);
+    void rotateGlobalZAxis();
 
     void scaleX(float);
     void scaleY(float);
     void scaleZ(float);
 
+    void resetLocalAxles();
 
-private:
+
+
+
+protected:
     struct Transform
     {
         //position
@@ -53,6 +60,10 @@ private:
         float _scaleY;
         float _scaleZ;
     } transform;
+
+    glm::vec3 xAxis;
+    glm::vec3 yAxis;
+    glm::vec3 zAxis;
 
 };
 

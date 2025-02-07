@@ -1,5 +1,4 @@
 #include "MyShader.h"
-#include <GL/glew.h>
 
 #define SHADER_COMP 0
 #define PROGRAM_LINK 1

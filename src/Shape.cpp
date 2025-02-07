@@ -111,11 +111,12 @@ void Shape::draw(MyShader &shader)
 {
     shader.use();
     glm::mat4 model = glm::mat4(1.0f);
+    resetLocalAxles();
     model = glm::translate(model, getPosition());
+    model = glm::rotate(model, glm::radians(roll()), getZAxis());
+    model = glm::rotate(model, glm::radians(yaw()), getYAxis());
+    model = glm::rotate(model, glm::radians(pitch()), getXAxis());
     model = glm::scale(model, getScale());
-    model = glm::rotate(model, glm::radians(pitch()), glm::vec3(1,0,0));
-    model = glm::rotate(model, glm::radians(yaw()), glm::vec3(0,1,0));
-    model = glm::rotate(model, glm::radians(roll()), glm::vec3(0,0,1));
     shader.setMat4("model", model);
     glBindVertexArray(VAO);
     glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0);
