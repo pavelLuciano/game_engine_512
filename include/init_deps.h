@@ -64,7 +64,7 @@ inline GLFWwindow* initDepsAndCreateWin()
     glfwSetScrollCallback(mi_ventana, scroll_callback);
 
     // tell GLFW to capture our mouse
-    glfwSetInputMode(mi_ventana, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+    glfwSetInputMode(mi_ventana, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
     
     if (glewInit() != GLEW_OK) 
     {

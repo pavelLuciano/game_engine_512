@@ -113,9 +113,7 @@ void Shape::draw(MyShader &shader)
     glm::mat4 model = glm::mat4(1.0f);
     resetLocalAxles();
     model = glm::translate(model, getPosition());
-    model = glm::rotate(model, glm::radians(roll()), getZAxis());
-    model = glm::rotate(model, glm::radians(yaw()), getYAxis());
-    model = glm::rotate(model, glm::radians(pitch()), getXAxis());
+    model = model * getRotationMatrix();
     model = glm::scale(model, getScale());
     shader.setMat4("model", model);
     glBindVertexArray(VAO);

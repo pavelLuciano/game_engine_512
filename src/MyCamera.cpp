@@ -16,11 +16,9 @@ void MyCamera::setProjection(bool b)
     else setPerspective();
 }
 
-//modificar
 glm::mat4 MyCamera::getViewMat()
 {
-    //return glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, -3.0f));
-    return glm::lookAt(getPosition(), getPosition() - zAxis, yAxis);
+    return glm::lookAt(getPosition(), getPosition() - getZAxis(), getYAxis());
 }
 glm::mat4 MyCamera::getProjectionMat()
 {
@@ -30,12 +28,12 @@ glm::mat4 MyCamera::getProjectionMat()
 
 void MyCamera::processMouseInput(float xoffset, float yoffset)
 {
-    float sensitivity = 0.1f;
+    float sensitivity = 0.15f;
     xoffset *= sensitivity;
     yoffset *= sensitivity;
 
-    setPitch(yoffset);
-    
+    rotateLocal_X(yoffset);
+    rotateGlobalYAxis(-xoffset);
 }
 
 
@@ -43,29 +41,29 @@ void MyCamera::processInput(GLFWwindow* window,float deltaTime)
 {
     glm::vec3 direction = glm::vec3(0.0f);
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-        direction += -zAxis;
+        direction += -getZAxis();
     if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-        direction += zAxis;
+        direction += getZAxis();
     if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-        direction -= xAxis; 
+        direction -= getXAxis(); 
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-        direction += xAxis;
+        direction += getXAxis();
     if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS)
-        direction += yAxis; 
+        direction += getYAxis(); 
     if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS)
-        direction -= yAxis;
+        direction -= getYAxis();
 
     if (direction != glm::vec3(0.0f))
     {
         direction = glm::normalize(direction);
-        glm::vec3 translation = deltaTime * 2.0f * direction;
+        glm::vec3 translation = deltaTime * 5.0f * direction;
         move(translation);
     }
 }
 
 void MyCamera::move(glm::vec3 move_vec)
 {
-    transform._x += move_vec[0];
-    transform._y += move_vec[1];
-    transform._z += move_vec[2];
+    transform.x += move_vec[0];
+    transform.y += move_vec[1];
+    transform.z += move_vec[2];
 }

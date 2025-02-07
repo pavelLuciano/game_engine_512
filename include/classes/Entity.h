@@ -10,23 +10,26 @@ public:
     Entity();
 
 
-    float x(){return transform._x;}
-    float y(){return transform._y;}
-    float z(){return transform._z;}
-    float pitch(){return transform._pitch;}
-    float yaw(){return transform._yaw;}
-    float roll(){return transform._roll;}
+    float x(){return transform.x;}
+    float y(){return transform.y;}
+    float z(){return transform.z;}
+    float pitch(){return transform.pitch;}
+    float yaw(){return transform.yaw;}
+    float roll(){return transform.roll;}
+
     glm::vec3 getPosition();
     glm::vec3 getRotation();
     glm::vec3 getScale();
     glm::vec3 getXAxis();
     glm::vec3 getYAxis();
     glm::vec3 getZAxis();
+    glm::mat4 getRotationMatrix();
 
     void setX(float);
     void setY(float);
     void setZ(float);
 
+    //algo obsoletas
     void setPitch(float);
     void setYaw(float);
     void setRoll(float);
@@ -39,31 +42,39 @@ public:
     void scaleY(float);
     void scaleZ(float);
 
+    //nuevas funciones
+    //estas funciones pretenden reemplazar las ambiguedades de las funciones anteriores
+    void rotateLocal_X(float);
+    void rotateLocal_Y(float);
+    void rotateLocal_Z(float);
+    void updatePitchYawRoll();
     void resetLocalAxles();
-
-
-
+    void updateLocalAxles();
 
 protected:
     struct Transform
     {
         //position
-        float _x;
-        float _y;
-        float _z;
+        float x;
+        float y;
+        float z;
         //rotate
-        float _pitch;
-        float _yaw;
-        float _roll;
+        float pitch;
+        float yaw;
+        float roll;
         //scale
-        float _scaleX;
-        float _scaleY;
-        float _scaleZ;
+        float scaleX;
+        float scaleY;
+        float scaleZ;
     } transform;
 
-    glm::vec3 xAxis;
-    glm::vec3 yAxis;
-    glm::vec3 zAxis;
+    struct LocalAxles
+    {
+        glm::vec3 xAxis;
+        glm::vec3 yAxis;
+        glm::vec3 zAxis;
+    } localAxles;
+    
 
 };
 
