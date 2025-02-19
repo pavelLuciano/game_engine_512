@@ -51,7 +51,7 @@ public:
     void resetLocalAxles();
     void updateLocalAxles();
 
-protected:
+public:
     struct Transform
     {
         //position

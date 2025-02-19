@@ -17,7 +17,7 @@ set(IMPLOT_DIR      "${DEPS_DIR}/implot")
 set(LOGL_DIR        "${DEPS_DIR}/learn_open_gl")
 set(INTEFACE_DIR    "${INCLUDE_DIR}/interfaces")
 set(CLASS_DIR       "${INCLUDE_DIR}/classes")
-set(ENGINE_DIR      "${INCLUDE_DIR}/engine")
+set(ENGINE_DIR      "${INCLUDE_DIR}/HiveEngine")
 
 # Incluir los directorios de cabeceras
 include_directories(${INCLUDE_DIR})
@@ -30,6 +30,7 @@ include_directories(${ENGINE_DIR})
 
 # Buscar los archivos fuente en src/
 file(GLOB SOURCES "${SRC_DIR}/*.cpp")
+list(APPEND SOURCES "${CMAKE_SOURCE_DIR}/Application.cpp")
 
 # Añadir fuentes específicas de ImGui
 list(APPEND SOURCES

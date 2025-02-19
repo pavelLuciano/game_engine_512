@@ -32,8 +32,8 @@ void MyCamera::processMouseInput(float xoffset, float yoffset)
     xoffset *= sensitivity;
     yoffset *= sensitivity;
 
-    rotateLocal_X(yoffset);
-    rotateGlobalYAxis(-xoffset);
+    //rotateLocal_X(yoffset);
+    //rotateGlobalYAxis(-xoffset);
 }
 
 
@@ -49,9 +49,9 @@ void MyCamera::processInput(GLFWwindow* window,float deltaTime)
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
         direction += getXAxis();
     if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS)
-        direction += getYAxis(); 
+        direction += glm::vec3(0.0f, 1.0f, 0.0f); 
     if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS)
-        direction -= getYAxis();
+        direction -= glm::vec3(0.0f, 1.0f, 0.0f); 
 
     if (direction != glm::vec3(0.0f))
     {

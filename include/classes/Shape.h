@@ -10,7 +10,7 @@ struct Vertex
     glm::vec2 tex_coords;
 };
 
-class Shape: public Entity, IDrawable
+class Shape: public Entity, public IDrawable
 {
 public:
     unsigned int VAO;
@@ -34,7 +34,7 @@ private:
     void setup();
     void loadFromFile(const char*);
 
-    void printVertex(Vertex v)
+    inline void printVertex(Vertex v)
     {
         std::cout << v.position[0] << " " << v.position[1] << " " << v.position[2] 
                   << " " << v.color[0] << " " << v.color[1] << " " << v.color[2] << std::endl;

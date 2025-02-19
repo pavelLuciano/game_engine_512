@@ -6,6 +6,7 @@
 #include "imgui.h"
 #include "implot.h"
 #include <iostream>
+#include "HiveEngine.h"
 
 //ENV VARS
 #define HEIGHT 600
@@ -64,7 +65,7 @@ inline GLFWwindow* initDepsAndCreateWin()
     glfwSetScrollCallback(mi_ventana, scroll_callback);
 
     // tell GLFW to capture our mouse
-    glfwSetInputMode(mi_ventana, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+    glfwSetInputMode(mi_ventana, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
     
     if (glewInit() != GLEW_OK) 
     {
@@ -72,7 +73,8 @@ inline GLFWwindow* initDepsAndCreateWin()
         glfwTerminate();
         return NULL;
     }
-    glViewport(0, 0, WIDTH*0.8,  HEIGHT);
+    glViewport(BeeHive::screen.vieport_x, BeeHive::screen.vieport_x,
+               BeeHive::screen.viewport_width , BeeHive::screen.viewport_heigt);
     std::cout << "OpenGL iniciado correctamente\nVersion: " << glGetString(GL_VERSION) << std::endl;
     glEnable(GL_DEPTH_TEST);
 
@@ -109,7 +111,9 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
     // make sure the viewport matches the new window dimensions; note that width and 
     // height will be significantly larger than specified on retina displays.
-    glViewport(0, 0, height,  height);
+    BeeHive::screen.setScreenSize(width, height);
+    glViewport(BeeHive::screen.vieport_x, BeeHive::screen.vieport_x,
+               BeeHive::screen.viewport_width , BeeHive::screen.viewport_heigt);
 }
 
 void processInput(GLFWwindow *window)
