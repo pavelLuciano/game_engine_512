@@ -165,6 +165,19 @@ namespace BeeHive
         return true;
     }
 
+    bool terminate()
+    {
+        // Cerrar ImGui y ImPlot
+        ImGui_ImplOpenGL3_Shutdown();
+        ImGui_ImplGlfw_Shutdown();
+        ImGui::DestroyContext();
+
+        // Cerrar GLFW
+        glfwDestroyWindow(window.self);  // `window` es el puntero a tu ventana GLFW
+        glfwTerminate();
+        return true;
+    }
+
     //Callbacks
     void framebuffer_size_callback(GLFWwindow* _win, int width, int height)
     {
@@ -207,6 +220,6 @@ namespace BeeHive
 
 
 
-}
+};
 
 #endif

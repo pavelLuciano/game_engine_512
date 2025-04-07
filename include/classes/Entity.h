@@ -9,7 +9,7 @@ class Entity
 public:
     Entity();
 
-
+    virtual void update() = 0;
     float x(){return transform.x;}
     float y(){return transform.y;}
     float z(){return transform.z;}

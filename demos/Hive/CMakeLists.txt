@@ -8,7 +8,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Directorios
-set(GAME_HEAD_SRC   "${CMAKE_SOURCE_DIR}/headers")
+set(GAME_HEAD_DIR   "${CMAKE_SOURCE_DIR}/headers")
+set(GAME_HEAD_SRC   "${CMAKE_SOURCE_SRC}/src")
 set(ENG_SRC_DIR     "${CMAKE_SOURCE_DIR}/../../src")
 set(INCLUDE_DIR     "${CMAKE_SOURCE_DIR}/../../include")
 set(DEPS_DIR        "${CMAKE_SOURCE_DIR}/../../dependencies")
@@ -21,6 +22,7 @@ set(CLASS_DIR       "${INCLUDE_DIR}/classes")
 set(ENGINE_DIR      "${INCLUDE_DIR}/HiveEngine")
 
 # Incluir los directorios de cabeceras
+include_directories(${GAME_HEAD_DIR})
 include_directories(${INCLUDE_DIR})
 include_directories(${DEPS_DIR})
 include_directories(${IMGUI_DIR})
@@ -31,7 +33,10 @@ include_directories(${ENGINE_DIR})
 
 # Buscar los archivos fuente en src/
 file(GLOB SOURCES "${ENG_SRC_DIR}/*.cpp")
-list(APPEND SOURCES "${CMAKE_SOURCE_DIR}/HiveGame.cpp")
+list(APPEND SOURCES 
+    "${CMAKE_SOURCE_DIR}/HiveGame.cpp"
+
+    )
 
 # Añadir fuentes específicas de ImGui
 list(APPEND SOURCES

@@ -6,6 +6,7 @@ class IDrawable
 {
 public:
     virtual void draw(MyShader&) = 0;  // Funcion virtual pura
+    virtual void draw() = 0;
 };
 
 #endif
